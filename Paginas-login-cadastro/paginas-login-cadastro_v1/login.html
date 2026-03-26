@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="pagina_login">
+        <img src="" alt="">
+        <H1>SAVE YOGURT </H1>
+        <br>
+        <h2> Login </h2>
+        <input type="text" id="email_usuario" placeholder="email">
+        <br><br>
+        <input type="password" id="senha_usuario" placeholder="Senha">
+        <br><br>
+        <button onclick="continuar()">Continuar </button>
+        <br> <br>
+        <button onclick="esqueceu_senha()">Esqueceu a senha ? </button>
+        <br><br>
+        <button onclick="cadastro()">Cadastrar-se </button> 
+
+        <div id="resultado"></div>
+    </div>
+
+   <div id="pagina_redefinir"> 
+    
+    <h1>Save YOGURT</h1>
+    <h2>Redefinir senha</h2>
+    <input type="password" id="nova_senha" placeholder="Digitar nova senha ">
+    <br><br>
+    <input type="password" id="confirmar_senha" placeholder=" Confirmar nova senha ">
+    <br><br>
+    <button onclick="redefinir()">Redefinir senha</button>
+    <br><br>
+    
+
+
+    <div id="exibir"></div> 
+</div>
+
+
+<div id="pagina_cadastro">
+    <h1>CADASTRE-SE AQUI</h1> 
+    <br><br>
+    <input type="text" id="nome_completo" placeholder="Nome completo">
+    <br><br>
+    <input type="text" id="email"  placeholder="e-mail">
+    <br><br>
+    <input type="password" id="senha_cadastro"  placeholder="senha">
+    <br><br>
+    <input type="text" id="cnpj_usuario" placeholder="cnpj" maxlength="18">
+    <br><br>
+   
+    <br>
+   
+    <div id="exibir_cadastro"></div>
+  
+    <button onclick="cadastro_realizado()">Cadastrar-se</button>
+
+
+</div>
+</body>
+    <!-- <script>
+        function continuar(){
+            let email= email_usuario.value
+            let senha = senha_usuario.value
+
+            let email_acesso = "julia.araripe@sptech.school"
+            let senha_acesso = "julia123"
+            
+
+            if (email == "" || senha ==""){
+                resultado.innerHTML =  `todos os campos devem ser preenchidos `
+            }
+
+
+            if (email != email_acesso  || senha != senha_acesso ){
+                resultado.innerHTML = `Credenciais incorretas`
+            } else {
+                resultado.innerHTML = `funcionou`
+                // linkar outra pagina (o usuario efetuou o login ) window.location.href= "arquivo"
+
+            }
+        }
+
+        function esqueceu_senha (){
+             // window.location.href= "arquivo"
+             // o usuario tem que recurar a senha 
+             window.location.href= "esqueceu_senha.html"
+        }
+        
+        function cadastro (){
+            window.location.href= "cadastro.html"
+        }
+    </script> -->
+</html>
+<style> 
+    #pagina_redefinir  {
+        display: none;
+    }
+    #pagina_cadastro {
+        display: none;
+    }
+</style>
