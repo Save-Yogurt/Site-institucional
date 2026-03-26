@@ -1,0 +1,431 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+}
+
+/* Começo Header */
+header{
+    height: 69px;
+    display: flex;
+    min-width: max-content;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-color: rgba(0, 0, 0, 0.15);
+    /* box-shadow: ; */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#div_logo{
+    margin-left: 32px;
+}
+#logo{
+    font-size: 24px;
+    font-weight: 800;
+    color: #006876;
+}
+
+#div_links{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-size: 14px;
+}
+
+#div_botoes{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-right: 32px;
+}
+
+.botoes{
+    border-width: 0px;
+    border-color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    width: 130px;
+    height: 36px;
+    border-radius: 50px;
+    background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
+    color: white;
+}
+/* Fim Header */
+
+
+
+/* Começo Início */
+.inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px;
+    gap: 100px;
+    min-height: calc(100dvh - 69px);
+}
+
+/* Caixa da parte de texto */
+.inicio_texto {
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inicio_texto h1 {
+    font-size: 3rem;
+    text-align: left;
+    color: #000;
+}
+
+.inicio_texto h1 span {
+    color: #00BCD4;
+}
+
+.inicio_texto p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.div_botoes_inicio{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-right: 32px;
+}
+
+.botao_inicio1{
+    border-width: 0px;
+    border-color: transparent;
+    font-size: 14px;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
+    color: white;
+}
+
+.botao_inicio2{
+    border-style: solid;
+    border-width: 3px;
+    border-color: #006876;
+    font-size: 14px;
+    font-weight: bold;
+    width: 300px;
+    height: 50px;
+    border-radius: 50px;
+    background: transparent;
+    color: #006876;
+}
+
+/* Imagem */
+.inicio img {
+    width: 45%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.39);
+}
+/* Fim Início */
+
+
+/* Começo Sobre Nós */
+.sobreNos {
+    padding: 8% 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: white;
+}
+
+.sobreNos .titulo {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.sobreNos .titulo span {
+    color: #00BCD4;
+}
+
+.sobreNos_identificacao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.39);
+}
+
+/* Cards */
+.texto_sobreNos {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.sobreNos_conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.sobreNos_identificacao {
+    width: 40%;
+}
+
+.textos_sobreNos {
+    width: 40%;        /* ou 50% se preferir */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;         /* espaço entre título e texto */
+}
+
+.textos_sobreNos .titulo {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: left;
+}
+/* Fim Sobre Nós */
+
+
+
+/* Começo Equipe */
+.equipe {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.equipe .titulo {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.equipe .titulo span {
+    color: #00BCD4;
+}
+
+/* Grid dos cards */
+.cards_equipe {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 em cima e 3 embaixo */
+    gap: 35px;
+    padding: 0 20%;
+}
+
+/* Card individual */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Foto do integrante */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Texto */
+.card h3 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #006876;
+}
+
+.card p {
+    color: #555;
+    margin-top: 5px;
+}
+/* Fim Equipe */
+
+/* Começo Contato */
+.faleConosco {
+    padding: 6% 10%;
+    text-align: center;
+    background: white;
+    margin-bottom: 100px;
+}
+
+.faleConosco h2 {
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.faleConosco h2 span {
+    color: #00BCD4;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.cards {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card_contato {
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+}
+
+.card_contato h3 {
+    color: #006876;
+}
+
+.card_contato:hover {
+    transform: translateY(-5px);
+}
+
+.card_contato i {
+    font-size: 1.7rem;
+    color: #006876;
+    margin-bottom: 8px;
+}
+
+.form {
+    width: 40%;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.form h3 {
+    margin-bottom: 18px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.form h3 span {
+    color: #00BCD4;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f8f8f8;
+    margin-bottom: 18px;
+}
+
+.form input:hover,
+.form textarea:hover {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #00bcd4;
+}
+
+.form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form button {
+    border-width: 0px;
+    border-color: transparent;
+    font-size: 15px;
+    font-weight: bold;
+    width: 300px;
+    height: 40px;
+    border-radius: 50px;
+    background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
+    color: white;
+}
+/* Fim Contato */
+
+/* Começo Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px;
+    gap: 10px;
+    background: #F6FAFE;
+}
+
+.footer_brand {
+    max-width: 10%;
+}
+
+.footer_brand h2 { 
+    color: #006876; 
+    margin-bottom: 10px; 
+}
+
+.footer_brand p { 
+    color: #888; 
+    font-size: 13px; 
+}
+
+.footer_col { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.footer_col span { 
+    color: #999; 
+    font-size: 11px; 
+    font-weight: bold; 
+}
+
+.footer_col a { 
+    color: #666; 
+    text-decoration: none; 
+    font-size: 14px; 
+}
+
+.footer_icons { 
+    display: flex; 
+    gap: 15px; 
+}
+
+.footer_icons img { 
+    width: 15px; 
+    min-width: 15px;
+    opacity: 1; 
+}
+/* Fim Footer */

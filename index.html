@@ -3,15 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <title>Save Yogurt</title>
+
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Darker+Grotesque:wght@300..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- Link FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-    <h1 class="teste">teste</h1>
+<header>
+        <div id="div_logo">
+            <p id="logo">Save Yogurt</p>
+        </div>
+        <div id="div_links">
+            <p>Pagína Inicial</p>
+            <p>Sobre Nós</p>
+            <p>Simulador</p>
+        </div>
+        <div id="div_botoes">
+            <Button class="botoes">Login</Button>
+            <Button class="botoes">Cadastro</Button>
+        </div>
+    </header>
 
-    <button onclick="teste()"></button>
-    <img src="arquivos/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png" alt="">
+    <!-- Inicio -->
+    <section class="inicio">
+        <div class="inicio_texto">
+            <h1 class="titulo">Proteja o seu <span>iogurte</span> na estrada</h1>
+            <p>Integração total IoT para garantir que cada embalagem de iogurte mantenha o frescor original. O seu produto merece uma proteção extra.</p>
+            <div class="div_botoes_inicio">
+                <Button class="botao_inicio1">Saiba Mais</Button>
+                <Button class="botao_inicio2">Faça um Teste</Button>
+            </div>
+        </div>
+        <img src="https://www.lcbolonha.com.br/wp-content/uploads/2025/06/iogurte2.jpg">
+    </section><!-- Fim_Inicio -->
+    
+    <!-- Sobre Nós -->
+    <section class="sobreNos">
+        <div class="sobreNos_conteudo">
 
-    <script src="jscss/script.js">// deixe no final da pagina </script>
+            <div class="sobreNos_identificacao">
+                <img src="https://sptech.school/wp-content/uploads/2025/04/alunos-capa2-1.jpg" alt="Sptech">
+            </div>
+
+            <div class="textos_sobreNos">
+                <h2 class="titulo"> Quem <span>Somos</span> </h2>
+                <p>Somos estudantes de Ciência da Computação na São Paulo Tech School, visando fazer um projeto com justificativa 
+                    e funcionalidades pensando em ser realmente útil no mercado de trabalho, a empresa Save Yogurt nasce como um 
+                projeto da disciplina de Pesquisa e Inovação, lecionado pelos professores Fernando Brandão e Julia Araújo.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Fim Sobre Nós -->
+
+    <!-- Começo Equipe -->
+    <section class="equipe">
+        <h2 class="titulo"> Nossa <span>Equipe</span> </h2>
+
+        <div class="cards_equipe">
+
+            <div class="card">
+                <img src="https://i.pinimg.com/474x/f1/39/dc/f139dc89e5b1ad0818f612c7f33200a5.jpg" alt="">
+                <h3>Eduardo Guaglioni</h3>
+                <p>Função</p>
+            </div>
+
+            <div class="card">
+                <img src="https://i.pinimg.com/474x/f1/39/dc/f139dc89e5b1ad0818f612c7f33200a5.jpg" alt="">
+                <h3>Gabriel Veras</h3>
+                <p>Função</p>
+            </div>
+
+            <div class="card">
+                <img src="https://i.pinimg.com/474x/f1/39/dc/f139dc89e5b1ad0818f612c7f33200a5.jpg" alt="">
+                <h3>João Pedro</h3>
+                <p>Função</p>
+            </div>
+
+            <div class="card">
+                <img src="https://i.pinimg.com/474x/f1/39/dc/f139dc89e5b1ad0818f612c7f33200a5.jpg" alt="">
+                <h3>Maria Eduarda</h3>
+                <p>Função</p>
+            </div>
+
+            <div class="card">
+                <img src="https://i.pinimg.com/474x/f1/39/dc/f139dc89e5b1ad0818f612c7f33200a5.jpg" alt="">
+                <h3>Nicole Rodrigues</h3>
+                <p>Função</p>
+            </div>
+
+            <div class="card">
+                <img src="https://i.pinimg.com/474x/f1/39/dc/f139dc89e5b1ad0818f612c7f33200a5.jpg" alt="">
+                <h3>Pedro Barros</h3>
+                <p>Função</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- Fim Equipe -->
+
+    <!-- Começo Contato -->
+    <section class="faleConosco">
+        <h2>Fale <span>Conosco</span></h2>
+
+        <div class="conteudo">
+
+            <div class="cards">
+                <div class="card_contato">
+                    <i class="fa-solid fa-phone"></i>
+                    <h3>Telefone</h3>
+                    <p>(11) 99999-9999</p>
+                </div>
+
+                <div class="card_contato">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>contato@saveyogurt.com.br</p>
+                </div>
+
+                <div class="card_contato">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>Endereço</h3>
+                    <p>Rua Haddock Lobo, 595</p>
+                </div>
+
+                <div class="card_contato">
+                    <i class="fa-solid fa-clock"></i>
+                    <h3>Horário</h3>
+                    <p>Seg à Sex - 9h às 15h</p>
+                </div>
+            </div>
+
+            <div class="form">
+                <h3>Enviar <span>Mensagem</span></h3>
+
+                <input type="text" placeholder="Seu nome">
+                <input type="email" placeholder="Seu email">
+                <textarea placeholder="Sua mensagem"></textarea>
+                <button>Enviar</button>
+            </div>
+
+        </div>
+    </section>
+    <!-- Fim Contato -->
+
+
+
+
+    <footer>
+        <div class="footer_brand">
+        <h2>Save Yogurt</h2>
+        <p>© 2026 Save Yogurt Todos os direitos reservados.</p>
+    </div>
+
+    <div class="footer_col">
+        <span>LINKS RÁPIDOS</span>
+        <a href="#">Sobre Nós</a>
+        <a href="#">Produtos</a>
+        <a href="#">Integrantes</a>
+    </div>
+
+    <div class="footer_col">
+        <span>SUPORTE</span>
+        <a href="#">Contatos</a>
+        <a href="#">Endereço</a>
+        <a href="#">FAQ</a>
+    </div>
+
+    <div class="footer_col">
+        <span>SOCIAL</span>
+        <div class="footer_icons">
+            <a href="#"><img src="img/compartilhar.png"></a>
+            <a href="#"><img src="img/terra-icon.png"></a>
+            <a href="#"><img src="img/mail.png"></a>
+        </div>
+    </div>
+    </footer>
+
 </body>
 </html>
