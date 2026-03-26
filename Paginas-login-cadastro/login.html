@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <img src="" alt="">
+    <H1>SAVE YOGURT </H1>
+    <br>
+    <h2> Login </h2>
+    <input type="text" id="email_usuario" placeholder="email">
+    <br><br>
+    <input type="password" id="senha_usuario" placeholder="Senha">
+    <br><br>
+    <button onclick="continuar()">Continuar </button>
+    <br> <br>
+    <button onclick="esqueceu_senha()">Esqueceu a senha ? </button>
+    <br><br>
+    <button onclick="cadastro()">Cadastrar-se </button>
+
+    <div id="resultado"></div>
+
+
+</body>
+    <!-- <script>
+        function continuar(){
+            let email= email_usuario.value
+            let senha = senha_usuario.value
+
+            let email_acesso = "julia.araripe@sptech.school"
+            let senha_acesso = "julia123"
+            
+
+            if (email == "" || senha ==""){
+                resultado.innerHTML =  `todos os campos devem ser preenchidos `
+            }
+
+
+            if (email != email_acesso  || senha != senha_acesso ){
+                resultado.innerHTML = `Credenciais incorretas`
+            } else {
+                resultado.innerHTML = `funcionou`
+                // linkar outra pagina (o usuario efetuou o login ) window.location.href= "arquivo"
+
+            }
+        }
+
+        function esqueceu_senha (){
+             // window.location.href= "arquivo"
+             // o usuario tem que recurar a senha 
+             window.location.href= "esqueceu_senha.html"
+        }
+        
+        function cadastro (){
+            window.location.href= "cadastro.html"
+        }
+    </script> -->
+</html>
