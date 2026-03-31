@@ -4,12 +4,14 @@
     font-family: 'Manrope', sans-serif;
 }
 body{
-    background-color: #F0F4F8;
+    background-color: #ffffff;
+    margin: 0px;
 }
 p{
     margin-block-start:0px;
     margin-block-end:0px;
 }
+/* Começo Header */
 header{
     height: 69px;
     display: flex;
@@ -19,6 +21,7 @@ header{
     border-style: solid;
     border-width: 1px;
     border-bottom-color: rgba(0, 0, 0, 0.15);
+    /* box-shadow: ; */
     border-top: none;
     border-left: none;
     border-right: none;
@@ -66,12 +69,12 @@ main{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    gap: 100px;
+    gap: 50px;
 }
 
 #div_header_main{
     width: 768px;
-    height: 225px;
+    height: 195px;
 }
 
 #header_main_titulo{
@@ -246,4 +249,9 @@ footer {
     width: 15px; 
     min-width: 15px;
     opacity: 1; 
+}
+
+a {
+    text-decoration: none; /* Tira o sublinhado */
+    color: inherit;        /* Faz o link ter a mesma cor do texto pai */
 }

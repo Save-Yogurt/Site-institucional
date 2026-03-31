@@ -429,3 +429,8 @@ footer {
     opacity: 1; 
 }
 /* Fim Footer */
+
+a {
+    text-decoration: none; /* Tira o sublinhado */
+    color: inherit;        /* Faz o link ter a mesma cor do texto pai */
+}

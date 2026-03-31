@@ -1,57 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    font-family: 'Manrope', sans-serif;
+}
 body {
     background-color: #f5f7f8;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header */
-header{
+header {
     height: 69px;
     display: flex;
-    min-width: max-content;
     justify-content: space-between;
     align-items: center;
-    border-style: solid;
-    border-width: 1px;
-    border-bottom-color: rgba(0, 0, 0, 0.15);
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-#div_logo{
-    margin-left: 32px;
-    margin-bottom: 12px;
-}
-#logo{
-    font-size: 30px;
-    font-weight: 800;
-    color: #006876;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: white; 
 }
 
-#div_links{
+#div_logo {
+    margin-left: 32px;
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #006876;
+    margin: 0;
+}
+
+#div_links {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    font-size: 17px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-bottom: 12px;
-    
-}
-a{
-    text-decoration: none;
+    font-size: 14px;
 }
 
-#div_botoes{
+#div_botoes {
     display: flex;
     justify-content: space-between;
     gap: 30px;
     margin-right: 32px;
-    margin-bottom: 10px;
 }
 
-.botoes{
-    border-width: 0px;
-    border-color: transparent;
+.botoes {
+    border: none;
     font-size: 14px;
     font-weight: bold;
     width: 130px;
@@ -59,6 +54,10 @@ a{
     border-radius: 50px;
     background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
     color: white;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
 }
 
 /* TOPO */
@@ -193,4 +192,7 @@ footer {
     opacity: 1;
 }
 
-
+a {
+    text-decoration: none; /* Tira o sublinhado */
+    color: inherit;        /* Faz o link ter a mesma cor do texto pai */
+}

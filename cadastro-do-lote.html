@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro do lote</title>
 
-    <link rel="stylesheet" href="cadastro-do-lote.css">
+    <link rel="stylesheet" href="css/cadastro-do-lote.css">
 </head>
 
 <header>
@@ -14,93 +14,73 @@
         <p id="logo">Save Yogurt</p>
     </div>
     <div id="div_links">
+        <a href="dashboard.html">
         <p>Dashboard</p>
+        </a>
+        <a href="cadastro-do-lote.html">
         <p>Cadastro de itens</p>
+        </a>
     </div>
     <div id="div_botoes">
+        <a href="index.html">
         <Button class="botoes">Sair</Button>
+        </a>
     </div>
 </header>
 
 
 <body>
     <main>
-        <div id="bloco_titulo">
-            <div id="titulo">
-                <img id="imagem_caixa" src="caixa_icone.png" alt="">
-                <h1>Cadastro de Lote</h1>
-            </div>
-            <h5 class="subtitulo">Preencha as informações do lote e dos pillets</h5>
+    <div id="bloco_titulo">
+        <div id="titulo">
+            <img id="imagem_caixa" src="img/caixa_icone.png" alt="Ícone de Caixa">
+            <h1>Cadastro de Lote</h1>
+        </div>
+        <p class="subtitulo">Preencha as informações do lote e dos pallets</p>
+    </div>
+
+    <div id="bloco_maior">
+
+        <h3 class="titulo_secao">Informações do Lote</h3>
+        
+        <div class="grupo_input">
+            <label>Número do Lote</label>
+            <input type="text" id="id_numero_lote" placeholder="Ex: LT-2026-001">
         </div>
 
-        <div id="bloco_maior">
-
-            <div id="bloco_lotes">
-                <h3>Informações do Lote</h3>
-                <br><br>
-
-                <h5>Número do Lote:</h5>
-                <br>
-                <input class="numero_lote" type="number" id="id_numero_lote" placeholder="Ex: LT-2026-001">
-                <br><br>
-
-                <div class="inputs">
-                    <div>
-                        <h5>Data de Produção</h5>
-                        <br>
-                        <input class="largura" type="date" id="id_data_produção">
-                    </div>
-                    <div>
-                        <h5>Data de Validade</h5>
-                        <br>
-                        <input class="largura" type="date" id="id_data_validade">
-                    </div>
-                </div>
+        <div class="inputs_lado_a_lado">
+            <div class="grupo_input">
+                <label>Data de Produção</label>
+                <input type="date" id="id_data_producao">
             </div>
-
-            <hr>
-
-            <div id="bloco_pallet">
-                <h3 class="titulo_pallets">Informações dos Pallets</h3>
-                <br>
-
-                <div class="inputs">
-                    <div>
-                        <h5>Peso(kg)</h5>
-                        <br>
-                        <input type="number" id="id_peso" placeholder="Ex: 500">
-                    </div>
-                    <div>
-                        <h5>Quantidade de Pallets</h5>
-                        <br>
-                        <input type="number" id="id_qtd_pallets" placeholder="Ex: 10">
-                    </div>
-                </div>
-
-                <br><br>
-
-                <button class="botao" onclick="Lote()">Salvar Lote</button>
-
+            <div class="grupo_input">
+                <label>Data de Validade</label>
+                <input type="date" id="id_data_validade">
             </div>
         </div>
-    </main>
+
+        <hr>
+
+        <h3 class="titulo_secao">Informações dos Pallets</h3>
+
+        <div class="inputs_lado_a_lado">
+            <div class="grupo_input">
+                <label>Peso (kg)</label>
+                <input type="number" id="id_peso" placeholder="Ex: 500">
+            </div>
+            <div class="grupo_input">
+                <label>Quantidade de Pallets</label>
+                <input type="number" id="id_qtd_pallets" placeholder="Ex: 10">
+            </div>
+        </div>
+
+        <button class="botao" onclick="Lote()">Salvar Lote</button>
+
+    </div>
+</main>
 
 </body>
-
-<!-- <script>
-    function Lote() {
-        let numero_lote = Number(id_numero_lote)
-        let data_produção = Number(id_data_produção)
-        let data_validade = Number(id_data_validade)
-        let peso = Number(id_peso)
-        let qtd_pallets = Number(id_qtd_pallets)
-    }
-
-
-</script> -->
-
 </html>
-
 
 <footer>
     <div class="footer_brand">
