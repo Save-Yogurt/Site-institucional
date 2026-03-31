@@ -1,17 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <title>Dashboard</title>
 </head>
+
 <body>
-    <h1 class="teste">teste</h1>
 
-    <button onclick="teste()"></button>
-    <img src="arquivos/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png" alt="">
+    <!-- HEADER  -->
+    <header>
+        <div id="div_logo">
+            <p id="logo">Save Yogurt</p>
+        </div>
+        <div id="div_botoes">
+            <button class="botoes">Sair</button>
+        </div>
+    </header>
 
-    <script src="jscss/script.js">// deixe no final da pagina </script>
+    <!-- box de cima-->
+    <div class="box-superior">
+        <div class="titulo-grafico">
+            <h1>Medição da Temperatura do Lote</h1>
+            <p class="status">🟢 Conectado - Sensor #4421</p>
+        </div>
+
+        <select class="opcoes_sensores">
+            <option>Sensor #24</option>
+            <option>Sensor #25</option>
+            <option>Sensor #26</option>
+        </select>
+    </div>
+
+    <!-- Possivel alerta -->
+    <div class="alerta">
+        <div>
+            <strong> Alerta de Temperatura!</strong>
+            <p>A temperatura ultrapassou o limite de segurança.</p>
+        </div>
+    </div>
+
+    <!-- parte de baixo -->
+    <div class="box-inferior">
+
+        <!-- GRAFICO  -->
+        <div class="grafico">
+            <h3>Curva Térmica - Carga Atual</h3>
+            <p class="sub">Atualizado há 30 segundos</p>
+
+            <img src="arquivos\Grafico.png" class="img-grafico">
+
+            <div class="info-grafico">
+                <p>Média: <strong>5.4°C</strong></p>
+                <p class="critico">Status: Crítico</p>
+                <button class="btn-sec">Relatório Completo</button>
+            </div>
+        </div>
+
+        <!-- TEMPERATURA box da esquerda  -->
+        <div class="temperatura">
+            <p>🌡 Temperatura Atual</p>
+            <h2>8.4°C</h2>
+            <span>+2.1°C nos últimos 15 min</span>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer_brand">
+            <h2>Save Iogurte</h2>
+            <p>© 2026 Save Iogurte.</p>
+        </div>
+
+        <div class="footer_col">
+            <span>EMPRESA</span>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Produtos</a>
+            <a href="#">Integrantes</a>
+        </div>
+
+        <div class="footer_col">
+            <span>SUPORTE</span>
+            <a href="#">Contatos</a>
+            <a href="#">Endereço</a>
+            <a href="#">FAQ</a>
+        </div>
+
+        <div class="footer_col">
+            <span>SOCIAL</span>
+            <div class="footer_icons">
+                <img src="img/compartilhar.png">
+                <img src="img/terra-icon.png">
+                <img src="img/mail.png">
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>
