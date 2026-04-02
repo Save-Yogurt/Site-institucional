@@ -1,0 +1,99 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Containers principais */
+#pagina_login,
+#pagina_redefinir,
+#pagina_cadastro {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Títulos */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #4facfe;
+    box-shadow: 0 0 5px rgba(79,172,254,0.5);
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4facfe;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #00c6ff;
+}
+
+/* Botões secundários */
+button:nth-of-type(2),
+button:nth-of-type(3) {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+button:nth-of-type(2):hover,
+button:nth-of-type(3):hover {
+    background-color: #cfcfcf;
+}
+
+/* Espaçamento extra */
+br {
+    line-height: 10px;
+}
+
+/* Mensagens */
+#resultado,
+#exibir,
+#exibir_cadastro {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
