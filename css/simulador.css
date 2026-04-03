@@ -4,7 +4,7 @@
     font-family: 'Manrope', sans-serif;
 }
 body{
-    background-color: #ffffff;
+    background-color: whitesmoke;
     margin: 0px;
 }
 p{
@@ -64,8 +64,8 @@ header{
 
 main{
     margin-top: 50px;
-    margin-left: 32px;
-    margin-right: 32px;
+    margin-left: 10%;
+    margin-right: 10%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
