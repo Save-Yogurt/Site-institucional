@@ -1,111 +1,89 @@
 <!DOCTYPE html>
-<link rel="icon" href="img\ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script-login.js"></script>
+    <title>Save Yogurt - Acesso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="tela_login.css">
 </head>
-
 <body>
-    <div id="pagina_login">
-        <img src="" alt="">
-        <H1>SAVE YOGURT </H1>
-        <br>
-        <h2> Login </h2>
-        <input type="text" id="email_usuario" placeholder="email">
-        <br><br>
-        <input type="password" id="senha_usuario" placeholder="Senha">
-        <br><br>
-        <button onclick="continuar()">Continuar </button>
-        <br> <br>
-        <button onclick="esqueceu_senha()">Esqueceu a senha ? </button>
-        <br><br>
-        <button onclick="cadastro()">Cadastrar-se </button> 
 
-        <div id="resultado"></div>
-    </div>
+    <header>
+        <div id="div_logo">
+            <a href="#">
+                <img src="img\ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png" alt="Logo Save Yogurt">
+                <span id="logo_titulo">SAVE <span style="color: #006876;">YOGURT</span></span>
+            </a>
+        </div>
+        <div id="div_links">
+            <a href="#">Início</a>
+            <a href="#">Simulador</a>
+            <a href="#">Contato</a>
+        </div>
+        <div id="div_botoes">
+            <button class="botoes" onclick="window.location.href='index.html'">Voltar</button>
+        </div>
+    </header>
 
-   <div id="pagina_redefinir"> 
-    
-    <h1>Save YOGURT</h1>
-    <h2>Redefinir senha</h2>
-    <input type="password" id="nova_senha" placeholder="Digitar nova senha ">
-    <br><br>
-    <input type="password" id="confirmar_senha" placeholder=" Confirmar nova senha ">
-    <br><br>
-    <button onclick="redefinir()">Redefinir senha</button>
-    <br><br>
-    
-
-
-    <div id="exibir"></div> 
-</div>
-
-
-<div id="pagina_cadastro">
-    <h1>CADASTRE-SE AQUI</h1> 
-    <br><br>
-    <input type="text" id="nome_completo" placeholder="Nome completo">
-    <br><br>
-    <input type="text" id="email"  placeholder="e-mail">
-    <br><br>
-    <input type="password" id="senha_cadastro"  placeholder="senha">
-    <br><br>
-    <input type="text" id="cnpj_usuario" placeholder="cnpj" maxlength="18">
-    <br><br>
-   
-    <br>
-   
-    <div id="exibir_cadastro"></div>
-  
-    <button onclick="cadastro_realizado()">Cadastrar-se</button>
-
-
-</div>
-</body>
-    <!-- <script>
-        function continuar(){
-            let email= email_usuario.value
-            let senha = senha_usuario.value
-
-            let email_acesso = "julia.araripe@sptech.school"
-            let senha_acesso = "julia123"
-            
-
-            if (email == "" || senha ==""){
-                resultado.innerHTML =  `todos os campos devem ser preenchidos `
-            }
-
-
-            if (email != email_acesso  || senha != senha_acesso ){
-                resultado.innerHTML = `Credenciais incorretas`
-            } else {
-                resultado.innerHTML = `funcionou`
-                // linkar outra pagina (o usuario efetuou o login ) window.location.href= "arquivo"
-
-            }
-        }
-
-        function esqueceu_senha (){
-             // window.location.href= "arquivo"
-             // o usuario tem que recurar a senha 
-             window.location.href= "esqueceu_senha.html"
-        }
+    <main class="container_principal">
         
-        function cadastro (){
-            window.location.href= "cadastro.html"
-        }
-    </script> -->
+        <div id="pagina_login" class="card_auth">
+            <h1>Login</h1>
+            <div class="inputs_grupo">
+                <input type="text" id="email_usuario" placeholder="E-mail">
+                <input type="password" id="senha_usuario" placeholder="Senha">
+            </div>
+            <button class="botao_acao" onclick="continuar()">Continuar</button>
+            <div class="links_auxiliares">
+                <button class="botao_link" onclick="esqueceu_senha()">Esqueceu a senha?</button>
+                <button class="botao_link" onclick="cadastro()">Cadastrar-se</button>
+            </div>
+            <div id="resultado"></div>
+        </div>
+
+        <div id="pagina_redefinir" class="card_auth">
+            <h1>Redefinir senha</h1>
+            <div class="inputs_grupo">
+                <input type="password" id="nova_senha" placeholder="Nova senha">
+                <input type="password" id="confirmar_senha" placeholder="Confirmar nova senha">
+            </div>
+            <button class="botao_acao" onclick="redefinir()">Redefinir senha</button>
+            <div id="exibir"></div>
+        </div>
+
+        <div id="pagina_cadastro" class="card_auth">
+            <h1>Cadastre-se</h1>
+            <div class="inputs_grupo">
+                <input type="text" id="nome_completo" placeholder="Nome completo">
+                <input type="text" id="email" placeholder="E-mail">
+                <input type="password" id="senha_cadastro" placeholder="Senha">
+                <input type="text" id="cnpj_usuario" placeholder="CNPJ" maxlength="18">
+            </div>
+            <button class="botao_acao" onclick="cadastro_realizado()">Finalizar Cadastro</button>
+            <div id="exibir_cadastro"></div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer_brand">
+            <img src="img\ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png" alt="Logo">
+            <h2>Save Yogurt</h2>
+            <p>© 2026 Save Yogurt. Todos os direitos reservados.</p>
+        </div>
+        <div class="footer_col">
+            <span>PLATAFORMA</span>
+            <a href="#">Como funciona</a>
+            <a href="#">Segurança</a>
+        </div>
+        <div class="footer_col">
+            <span>SUPORTE</span>
+            <a href="#">Central de ajuda</a>
+            <a href="#">Termos de uso</a>
+        </div>
+    </footer>
+
+    <script src="script-login.js"></script>
+</body>
 </html>
-<style> 
-    #pagina_redefinir  {
-        display: none;
-    }
-    #pagina_cadastro {
-        display: none;
-    }
-</style>
