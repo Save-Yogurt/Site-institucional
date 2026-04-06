@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/dashboard.css">
     <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -60,7 +61,7 @@
             <h3>Curva Térmica - Carga Atual</h3>
             <p class="sub">Atualizado há 30 segundos</p>
 
-            <img src="arquivos\Grafico.png" class="img-grafico">
+            <canvas id="grafico_temperatura"></canvas>
 
             <div class="info-grafico">
                 <p>Média: <strong>5.4°C</strong></p>
@@ -110,5 +111,96 @@
     </footer>
 
 </body>
+
+<script>
+// gráfico
+    const data = {
+        labels: ['01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '00:00'],
+        datasets: [{
+            label: 'Temperatura',
+            data: [3, 7, 12, 5, 9, 1, 11, 6, 8, 2, 10, 13, 4, 13, 2, 9, 6, 11, 1, 8, 5, 12, 3, 10],
+
+            borderColor: '#0491a4',
+            borderWidth: 3,
+
+            tension: 0.4, // curva da linha
+
+            pointRadius: 0, // tira as bolinhas
+        }]
+    };
+
+    // cria o gráfico
+    const grafico_temperatura = new Chart(
+        document.getElementById('grafico_temperatura'),
+        {
+            type: 'line',
+            data: data,
+
+            options: {
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {display: false}
+                    },
+                    y: {
+                        min: 0,
+                        max: 12,
+                        grid: {color: '#eee'},
+                        ticks: {callback: (value) => value + '°C'}
+                    }
+                }
+
+            },
+
+            // faixas de cor
+            plugins: [
+                {
+                    id: 'faixa',
+                    beforeDraw: (chart) => {
+
+                        const { ctx, chartArea, scales } = chart
+                        const y = scales.y
+
+                        ctx.save()
+
+                        // ideal (4 a 8)
+                        // cor
+                        ctx.fillStyle = 'rgba(0, 0, 255, 0.1)'
+                        // faixa
+                        ctx.fillRect(
+                            chartArea.left,
+                            y.getPixelForValue(8),
+                            // onde vai estar localizada
+                            chartArea.right - chartArea.left,
+                            y.getPixelForValue(4) - y.getPixelForValue(8)
+                        )
+
+                        //  Alerta(+8)
+                        ctx.fillStyle = '#f8d7da'
+                        ctx.fillRect(
+                            chartArea.left,
+                            chartArea.top,
+                            chartArea.right - chartArea.left,
+                            y.getPixelForValue(8) - chartArea.top
+                        )
+                        // Alerta (-4)
+                        ctx.fillRect(
+                            chartArea.left,
+                            y.getPixelForValue(4),
+                            chartArea.right - chartArea.left,
+                            chartArea.bottom - y.getPixelForValue(4)
+                        )
+                        ctx.restore()
+
+                    }
+                }
+            ]
+        }
+    )
+</script>
 
 </html>

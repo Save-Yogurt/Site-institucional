@@ -141,6 +141,7 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: center;
+
 }
 
 .temperatura h2 {
