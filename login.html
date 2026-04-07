@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Save Yogurt - Acesso</title>
+    <title>Save Yogurt - Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="tela_login.css">
+    <link rel="stylesheet" href="css/tela_login.css">
+    
 </head>
 <body>
 
     <header>
         <div id="div_logo">
-            <a href="#">
-                <img src="img\ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png" alt="Logo Save Yogurt">
-                <span id="logo_titulo">SAVE <span style="color: #006876;">YOGURT</span></span>
+            <a href="index.html">
+            <img src="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+            <p id="logo_titulo">Save Yogurt</p>
             </a>
         </div>
         <div id="div_links">
-            <a href="#">Início</a>
-            <a href="#">Simulador</a>
-            <a href="#">Contato</a>
+            <a href="index.html">
+            <p>Página Inicial</p>
+            </a>
+            <a href="sobre_nos.html">
+            <p>Sobre Nós</p>
+            </a>
+            <a href="simulador.html">
+            <p>Simulador</p>
+            </a>
         </div>
         <div id="div_botoes">
-            <button class="botoes" onclick="window.location.href='index.html'">Voltar</button>
+            <a href="login.html">
+            <Button class="botoes">Login</Button>
+            </a>
+            <a href="cadastro.html">
+            <Button class="botoes">Cadastro</Button>
+            </a>
         </div>
     </header>
 
@@ -31,59 +43,53 @@
         <div id="pagina_login" class="card_auth">
             <h1>Login</h1>
             <div class="inputs_grupo">
-                <input type="text" id="email_usuario" placeholder="E-mail">
-                <input type="password" id="senha_usuario" placeholder="Senha">
+                <input type="email" id="ipt_email_login" placeholder="E-mail">
+                <input type="password" id="ipt_senha_login" placeholder="Senha">
             </div>
-            <button class="botao_acao" onclick="continuar()">Continuar</button>
+            <button class="botao_acao" onclick="login()">Continuar</button>
             <div class="links_auxiliares">
-                <button class="botao_link" onclick="esqueceu_senha()">Esqueceu a senha?</button>
-                <button class="botao_link" onclick="cadastro()">Cadastrar-se</button>
+                <a href="esqueceu_senha.html">
+                <button class="botao_link">Esqueceu a senha?</button>
+                </a>
             </div>
-            <div id="resultado"></div>
+            <div id="div_resultado_login"></div>
         </div>
-
-        <div id="pagina_redefinir" class="card_auth">
-            <h1>Redefinir senha</h1>
-            <div class="inputs_grupo">
-                <input type="password" id="nova_senha" placeholder="Nova senha">
-                <input type="password" id="confirmar_senha" placeholder="Confirmar nova senha">
-            </div>
-            <button class="botao_acao" onclick="redefinir()">Redefinir senha</button>
-            <div id="exibir"></div>
-        </div>
-
-        <div id="pagina_cadastro" class="card_auth1">
-            <h1>Cadastre-se</h1>
-            <div class="inputs_grupo">
-                <input type="text" id="nome_completo" placeholder="Nome completo">
-                <input type="text" id="email" placeholder="E-mail">
-                <input type="password" id="senha_cadastro" placeholder="Senha">
-                <input type="text" id="cnpj_usuario" placeholder="CNPJ" maxlength="18">
-            </div>
-            <button class="botao_acao" onclick="cadastro_realizado()">Finalizar Cadastro</button>
-            <div id="exibir_cadastro"></div>
-        </div>
-
     </main>
 
     <footer>
         <div class="footer_brand">
-            <img src="img\ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png" alt="Logo">
-            <h2>Save Yogurt</h2>
-            <p>© 2026 Save Yogurt. Todos os direitos reservados.</p>
-        </div>
-        <div class="footer_col">
-            <span>PLATAFORMA</span>
-            <a href="#">Como funciona</a>
-            <a href="#">Segurança</a>
-        </div>
-        <div class="footer_col">
-            <span>SUPORTE</span>
-            <a href="#">Central de ajuda</a>
-            <a href="#">Termos de uso</a>
-        </div>
-    </footer>
+        <img src="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+        <h2>Save Yogurt</h2>
+        <p>© 2026 Save Yogurt<br>Todos os direitos reservados.</p>
+    </div>
 
-    <script src="script-login.js"></script>
+    <div class="footer_col">
+        <span>LINKS RÁPIDOS</span>
+        <a href="#">Início</a>
+        <a href="#">Custo Invisível</a>
+        <a href="#">Monitoramento</a>
+        <a href="#">Nossos Valores</a>
+        <a href="#">Fale Conosco</a>
+    </div>
+
+    <div class="footer_col">
+        <span>PÁGINAS</span>
+        <a href="index.html">Landing Page</a>
+        <a href="simulador.html">Simulador</a>
+        <a href="cadastro_login.html">Cadastrar</a>
+        <a href="login.html">Login</a>
+        <a href="sobre_nos.html">Sobre Nós</a>
+    </div>
+
+    <div class="footer_col">
+        <span>SOCIAL</span>
+        <div class="footer_icons">
+            <a href="#"><img src="img/compartilhar.png"></a>
+            <a href="#"><img src="img/terra-icon.png"></a>
+            <a href="#"><img src="img/mail.png"></a>
+        </div>
+    </div>
+    </footer>
 </body>
+    <script src="js/script_login.js"></script>
 </html>

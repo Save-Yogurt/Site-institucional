@@ -7,68 +7,114 @@
 }
 
 body {
-    /* ADIÇÃO DA IMAGEM DE FUNDO */
-    background:   linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('img/capa.jpg') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('../img/capa.jpg') no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Reutilizando estilo de Header */
+/* Começo Header */
 header {
     position: fixed;
-    top: 0; left: 0; width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+
     height: 69px;
     display: flex;
+    min-width: max-content;
     justify-content: space-between;
     align-items: center;
+
     background: white;
-    border-bottom: 1px solid rgba(0,0,0,0.15);
+    border-style: solid;
+    border-width: 1px;
+    border-bottom-color: rgba(0,0,0,0.15);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
     z-index: 1000;
-    padding: 0 32px;
 }
 
-/* MELHORIA DOS LINKS DO HEADER (Início, Simulador, Contato) */
+#div_logo a{
+    margin-left: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+#div_logo img{
+    width: 60px;
+}
+
+#logo_titulo{
+    font-size: 24px;
+    font-weight: 800;
+    color: #00BCD4;
+}
+
+#div_links{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
 #div_links a {
     text-decoration: none;
-    color: #171C1F;
-    font-weight: 600;
-    font-size: 14px;
-    margin: 0 15px;
-    transition: 0.3s;
+    color: black;
 }
 
 #div_links a:hover {
     color: #00BCD4;
 }
 
-/* MELHORIA DO BOTÃO VOLTAR*/
-.botoes {
-    border: none;
+#div_botoes{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-right: 32px;
+}
+
+.botoes{
+    border-width: 0px;
+    border-color: transparent;
     font-size: 14px;
     font-weight: bold;
-    width: 110px;
+    width: 130px;
     height: 36px;
     border-radius: 50px;
     background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
     color: white;
     cursor: pointer;
-    transition: 0.4s;
-    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
 }
+@media (max-width: 900px) {
+    #div_links {
+        display: none;
+    }
 
-.botoes:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 188, 212, 0.4);
-    filter: brightness(1.1);
+    #logo_titulo {
+        font-size: 20px;
+    }
 }
+@media (max-width: 600px) {
+    #div_botoes{
+    gap: 10px;
+    }
+    .botoes{
+    font-size: 12px;
+    width: 100px;
+    height: 30px;
+    }
+}
+/* Fim Header */
 
-#div_logo img { width: 50px; margin-right: 10px; }
-#logo_titulo { font-size: 22px; font-weight: 800; color: #00BCD4; text-decoration: none; }
-
-/* Centralização do conteúdo de Login */
 .container_principal {
     flex: 1;
     display: flex;
@@ -76,17 +122,6 @@ header {
     align-items: center;
     padding-top: 80px; 
     padding-bottom: 40px;
-}
-
-.card_auth1 {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    padding: 40px;
-    border-radius: 25px;
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    text-align: center;
 }
 
 .card_auth {
@@ -100,7 +135,7 @@ header {
     text-align: center;
 }
 
-#pagina_redefinir, #pagina_cadastro { display: none; }
+#pagina_redefinir { display: none; }
 
 .card_auth h1 {
     color: #171C1F;
@@ -109,7 +144,6 @@ header {
     margin-bottom: 30px;
 }
 
-/* Estilização dos Inputs */
 .inputs_grupo {
     display: flex;
     flex-direction: column;
@@ -133,7 +167,6 @@ input:focus {
     background: white;
 }
 
-/* Botão Principal - Melhorado com Sombra e Hover */
 .botao_acao {
     width: 100%;
     height: 48px;
@@ -156,7 +189,6 @@ input:focus {
     box-shadow: 0 6px 20px rgba(0, 104, 118, 0.3);
 }
 
-/* Botões de link */
 .links_auxiliares {
     margin-top: 20px;
     display: flex;
@@ -180,52 +212,93 @@ input:focus {
     text-decoration: underline;
 }
 
-/* Footer Melhorado - Organização e Espaçamento */
 footer {
     display: flex;
     justify-content: space-between;
-    background: rgba(246, 250, 254, 0.95);
-    padding: 40px 10%;
-    border-top: 1px solid rgba(0,0,0,0.05);
+    padding: 35px;
+    background: #F6FAFE;
+    padding: 3.5% 5%;
 }
 
 .footer_brand {
-    text-align: left;
-}
-
-.footer_brand img { width: 60px; margin-bottom: 10px; }
-.footer_brand h2 { color: #00BCD4; font-size: 20px; font-weight: 800; }
-.footer_brand p { color: #888; font-size: 12px; margin-top: 5px; }
-
-.footer_col {
+    max-width: 15%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer_brand img{
+    width: 70px;
+}
+
+.footer_brand h2 { 
+    color: #00BCD4; 
+    margin-bottom: 10px; 
+}
+
+.footer_brand p { 
+    color: #888; 
+    font-size: 13px; 
+}
+
+.footer_col { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    margin-right: 8%;
 }
 
 .footer_col span { 
     color: #006876; 
-    font-weight: 800; 
-    font-size: 12px; 
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 13px; 
+    font-weight: bold; 
 }
 
 .footer_col a { 
     color: #666; 
     text-decoration: none; 
     font-size: 13px; 
-    transition: 0.3s; 
 }
 
 .footer_col a:hover { 
-    color: #00BCD4; 
-    padding-left: 5px; 
+    color: #00BCD4;
 }
 
-/* Responsividade Básica */
-@media (max-width: 768px) {
-    .card_auth { width: 90%; padding: 25px; }
-    footer { flex-direction: column; gap: 30px; text-align: center; }
-    .footer_brand { text-align: center; }
+.footer_icons { 
+    display: flex; 
+    gap: 15px; 
+}
+
+.footer_icons img { 
+    width: 15px; 
+    min-width: 15px;
+    opacity: 1; 
+}
+
+@media (max-width: 900px) {
+    .footer_brand {
+    max-width: 25%;
+    }
+    .footer_brand img{
+        width: 50px;
+    }
+    .footer_brand h2{
+        font-size: 18px;
+    }
+    .footer_brand p{
+        font-size: 9px;
+    }
+    .footer_col { 
+    margin-right: 4%;
+    }
+
+    .footer_col span { 
+        font-size: 10px; 
+    }
+
+    .footer_col a { 
+        font-size: 10px; 
+    }
 }

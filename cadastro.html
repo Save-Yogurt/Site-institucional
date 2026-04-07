@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Save Yogurt - Redefinir Senha</title>
-    <link rel="icon" href="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+    <title>Save Yogurt - Cadastro</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/esqueceu_senha.css">
+    <link rel="stylesheet" href="css/tela_cadastro.css">
 </head>
 <body>
 
@@ -18,36 +17,44 @@
             </a>
         </div>
         <div id="div_links">
-            <a href="index.html"><p>Página Inicial</p></a>
-            <a href="sobre_nos.html"><p>Sobre Nós</p></a>
-            <a href="simulador.html"><p>Simulador</p></a>
+            <a href="index.html">
+                <p>Página Inicial</p>
+            </a>
+            <a href="sobre_nos.html">
+                <p>Sobre Nós</p>
+            </a>
+            <a href="simulador.html">
+                <p>Simulador</p>
+            </a>
         </div>
         <div id="div_botoes">
-            <a href="login.html"><button class="botoes">Login</button></a>
-            <a href="cadastro.html"><button class="botoes">Cadastro</button></a>
+            <a href="login.html">
+                <button class="botoes">Login</button>
+            </a>
+            <a href="cadastro.html">
+                <button class="botoes">Cadastro</button>
+            </a>
         </div>
     </header>
 
     <main class="container_principal">
-        <div class="card_auth">
-            <h1>Redefinir Senha</h1>
+        <div id="pagina_cadastro" class="card_auth">
+            <h1>Cadastre-se</h1>
             <div class="inputs_grupo">
-                <input type="email" id="ipt_email_redefinir" placeholder="E-mail da conta">
-                <input type="password" id="ipt_nova_senha" placeholder="Nova senha">
-                <input type="password" id="ipt_confirmar_senha" placeholder="Confirmar nova senha">
+                <input type="text" id="ipt_codigo_cadastro" placeholder="Código">
+                <input type="text" id="ipt_cpf_cadastro" placeholder="CPF" maxlength="14">
+                <input type="email" id="ipt_email_cadastro" placeholder="E-mail">
+                <input type="password" id="ipt_senha_cadastro" placeholder="Senha">
+                <input type="password" id="ipt_confirmar_senha_cadastro" placeholder="Confirmar Senha">
             </div>
-            
-            <button class="botao_acao" onclick="redefinir()">Redefinir senha</button>
-            
-            <div class="links_auxiliares">
-                <a href="login.html" class="botao_link">Voltar para a tela de login</a>
+            <button class="botao_acao" onclick="cadastro_realizado()">Finalizar Cadastro</button>
+            <div id="div_resultado_cadastro"></div>
             </div>
-
-            <div id="resultado"></div>
+            </div>
         </div>
     </main>
 
-   <footer>
+    <footer>
         <div class="footer_brand">
         <img src="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
         <h2>Save Yogurt</h2>
@@ -81,7 +88,6 @@
         </div>
     </div>
     </footer>
-
     <script src="js/script_login.js"></script>
 </body>
 </html>

@@ -12,13 +12,16 @@
 <body>
     <header>
         <div id="div_logo">
-            <p id="logo">Save Yogurt</p>
+            <a href="index.html">
+            <img src="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+            <p id="logo_titulo">Save Yogurt</p>
+            </a>
         </div>
         <div id="div_links">
             <a href="index.html">
-            <p>Pagína Inicial</p>
+            <p>Página Inicial</p>
             </a>
-            <a href="index.html#sobreNos">
+            <a href="sobre_nos.html">
             <p>Sobre Nós</p>
             </a>
             <a href="simulador.html">
@@ -29,7 +32,9 @@
             <a href="login.html">
             <Button class="botoes">Login</Button>
             </a>
+            <a href="cadastro.html">
             <Button class="botoes">Cadastro</Button>
+            </a>
         </div>
     </header>
     <main>
@@ -63,7 +68,9 @@
                     Nossa
                     tecnologia atua onde a infraestrutura falha.</p><br>
                 <h4>Dependência absoluta do modal rodoviário</h4><br>
+                <p>Mais de 65% de todo transporte é feito por caminhões, evidenciando a dependencia no modelo rodoviario.</p><br>
                 <h4>Estradas não pavimentadas ou em condições críticas</h4>
+                <p>No Brasil menos de 22% das estradas são corretamente pavimentadas, assim danificando caminhões e meio de transporte.</p><br>
             </div>
             <div id="logistica2">
                 <div id="dados_logistica">
@@ -93,46 +100,52 @@
             <div id="simulador_form">
 
             <label>Quantas toneladas são transportadas por ano?</label>
-            <input class="inputs" type="text" id="ipt_quantidade_cargas" placeholder="Ex. 100"><br>
+            <input class="inputs" type="text" id="ipt_quantidade_cargas" placeholder="QUANTIDADE DE TONELADAS"><br>
 
             <label>Porcentagem de perdas na cadeia fria (%)</label>
-            <input class="inputs" type="text" id="ipt_taxa_perda" placeholder="Ex. 15"><br>
+            <input class="inputs" type="text" id="ipt_taxa_perda" placeholder="PORCENTAGEM QUE VOCÊ QUER TRABALHAR"><br>
 
             <label>Valor médio da tonelada de iogurte (R$)</label>
-            <input class="inputs" type="text" id="ipt_valor_medio" placeholder="Ex. 1000"><br>
+            <input class="inputs" type="text" id="ipt_valor_medio" placeholder="PREÇO DO KG"><br>
 
             <button id="botao_formulario" onclick="calcular()">Calcular Retorno</button>
         </div>
             <div id="resultado">
+                <img src="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png" alt="">
             </div>
         </div>
     </main>
     <footer>
         <div class="footer_brand">
-        <h2>Save Iogurte</h2>
-        <p>© 2024 Save Iogurte.</p>
+        <img src="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+        <h2>Save Yogurt</h2>
+        <p>© 2026 Save Yogurt<br>Todos os direitos reservados.</p>
     </div>
 
     <div class="footer_col">
-        <span>EMPRESA</span>
-        <a href="#">Sobre Nós</a>
-        <a href="#">Produtos</a>
-        <a href="#">Integrantes</a>
+        <span>LINKS RÁPIDOS</span>
+        <a href="#">Início</a>
+        <a href="#">Custo Invisível</a>
+        <a href="#">Monitoramento</a>
+        <a href="#">Nossos Valores</a>
+        <a href="#">Fale Conosco</a>
     </div>
 
     <div class="footer_col">
-        <span>SUPORTE</span>
-        <a href="#">Contatos</a>
-        <a href="#">Endereço</a>
-        <a href="#">FAQ</a>
+        <span>PÁGINAS</span>
+        <a href="index.html">Landing Page</a>
+        <a href="simulador.html">Simulador</a>
+        <a href="cadastro_login.html">Cadastrar</a>
+        <a href="login.html">Login</a>
+        <a href="sobre_nos.html">Sobre Nós</a>
     </div>
 
     <div class="footer_col">
         <span>SOCIAL</span>
         <div class="footer_icons">
-            <img src="img/compartilhar.png">
-            <img src="img/terra-icon.png">
-            <img src="img/mail.png">
+            <a href="#"><img src="img/compartilhar.png"></a>
+            <a href="#"><img src="img/terra-icon.png"></a>
+            <a href="#"><img src="img/mail.png"></a>
         </div>
     </div>
     </footer>

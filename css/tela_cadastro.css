@@ -1,16 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-
+/* Importação dos estilos base  */
 * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'Manrope', sans-serif;
 }
-body{
-    background-color: whitesmoke;
-    margin: 0px;
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('../img/capa.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-p{
-    margin-block-start:0px;
-    margin-block-end:0px;
-}
+
 /* Começo Header */
 header {
     position: fixed;
@@ -109,150 +113,80 @@ header {
     height: 30px;
     }
 }
+/* Fim Header */
 
-main{
-    margin-top: 100px;
-    margin-left: 10%;
-    margin-right: 10%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 50px;
-}
-
-#div_header_main{
-    width: 768px;
-    height: 195px;
-}
-
-#header_main_titulo{
-    font-size:62px ;
-    font-weight:800;
-}
-
-#div_projecao{
-    display: flex;
-    justify-content: space-between;
-}
-.projecao{
-    border-style: solid;
-    border-width: 7px;
-    border-bottom:none;
-    border-top: none;
-    border-left-color: #006876;
-    border-right: none;
-    border-radius: 25px;
-    padding: 25px;
-    width: 500px;
-    max-width: 500px;
-    max-height: 261px;
-    background-color: rgb(255, 255, 255);
-}
-#logistica {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#logistica1 {
-    display: flex;
-    max-width: 450px;
-    flex-direction: column;
-    justify-content: start;
-}
-
-#logistica2 {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.container_principal {
     flex: 1;
-    max-width: 550px;
-    justify-content: space-between;
-}
-
-#dados_logistica {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-}
-
-.container_logistica {
-    width: 220px;
-    border-left: 7px solid #006876;
-    border-radius: 10px;
-    padding: 15px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
-}
-
-.container_logistica[style*="background-color"] {
-    color: white;
-}
-
-#caminhao {
-    width: 100%; 
-    height: auto;
-    border-radius: 10px;
-    display: block;
-}
-#missao{
-    width: 500px;
-}
-#simulador{
-    margin-bottom: 100px;
-    width:100%;
-    height: 400px;
-    background: #ffffff 100%;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-#resultado{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    padding-top: 80px; 
+    padding-bottom: 40px;
 }
-#simulador_form{
-    margin-top: 50px;
-    width: 50%;
+
+.card_auth {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.card_auth h1 {
+    color: #171C1F;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.inputs_grupo {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    font-weight: 600;
+    gap: 15px;
+    margin-bottom: 25px;
 }
-#botao_formulario{
-    width: 300px;
-    border-radius: 10px;
-    border: solid;
-    border-width: 1px;
-    height: 30px;
-    font-weight: 800;
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background: #f8f8f8;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #00BCD4;
+    background: white;
+}
+
+.botao_acao {
+    width: 100%;
+    height: 48px;
+    border-radius: 50px;
+    border: none;
     background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
     color: white;
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 104, 118, 0.2);
 }
-.inputs{
-    color: rgb(0, 0, 0);
-    width: 300px;
-    height: 30px;
-    font-family: inherit;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: #f8f8f8;
-    margin-bottom: 18px;
-}
-.inputs::placeholder{
-    color:#000000;
-    opacity: 1
 
+.botao_acao:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+    box-shadow: 0 6px 20px rgba(0, 104, 118, 0.3);
 }
-#resultado{
-    width: 50%;
-    background: white;
-    border-radius: 20px;
-    flex-direction: column;
-}
+
 footer {
     display: flex;
     justify-content: space-between;
@@ -342,8 +276,4 @@ footer {
     .footer_col a { 
         font-size: 10px; 
     }
-}
-a {
-    text-decoration: none; /* Tira o sublinhado */
-    color: inherit;        /* Faz o link ter a mesma cor do texto pai */
 }
