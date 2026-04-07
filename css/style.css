@@ -158,7 +158,7 @@ header {
 }
 
 .div_botoes_inicio a {
-    flex: 1;            /* Cada botão ocupa metade do espaço */
+    flex: 1; 
 }
 
 .botao_inicio1{
