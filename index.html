@@ -185,14 +185,15 @@
                 </div>
             </div>
 
-            <div class="form">
+            <form class="form" action="https://formsubmit.co/saveyogurt.contato@gmail.com" method="POST">
                 <h3>Enviar <span>Mensagem</span></h3>
 
-                <input type="text" placeholder="Seu nome">
-                <input type="email" placeholder="Seu email">
-                <textarea placeholder="Sua mensagem"></textarea>
-                <button>Enviar</button>
-            </div>
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu email" required>
+                <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
 
         </div>
     </section>
