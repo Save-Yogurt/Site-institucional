@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<link rel="icon" href="img\ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,20 +15,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
 
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
-<header>
+    <header>
         <div id="div_logo">
-            <p id="logo">Save Yogurt</p>
+            <a href="index.html">
+            <img src="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+            <p id="logo_titulo">Save Yogurt</p>
+            </a>
         </div>
         <div id="div_links">
             <a href="index.html">
-            <p>Pagína Inicial</p>
+            <p>Página Inicial</p>
             </a>
-            <a href="#sobreNos">
+            <a href="sobre_nos.html">
             <p>Sobre Nós</p>
             </a>
             <a href="simulador.html">
@@ -37,7 +43,7 @@
         <div id="div_botoes">
             <a href="login.html">
             <Button class="botoes">Login</Button>
-            </a>
+            <a href="cadastro_login.html">
             <Button class="botoes">Cadastro</Button>
         </div>
     </header>
@@ -56,72 +62,94 @@
                 </a>
             </div>
         </div>
+        <div class="inicio_img">
         <img src="https://www.lcbolonha.com.br/wp-content/uploads/2025/06/iogurte2.jpg">
-    </section><!-- Fim_Inicio -->
-    
-    <!-- Sobre Nós -->
-    <section class="sobreNos" id="sobreNos">
-        <div class="sobreNos_conteudo">
-
-            <div class="sobreNos_identificacao">
-                <img src="https://sptech.school/wp-content/uploads/2025/04/alunos-capa2-1.jpg" alt="Sptech">
-            </div>
-
-            <div class="textos_sobreNos">
-                <h2 class="titulo"> Quem <span>Somos</span> </h2>
-                <p>Somos estudantes de Ciência da Computação na São Paulo Tech School, visando fazer um projeto com justificativa 
-                    e funcionalidades pensando em ser realmente útil no mercado de trabalho, a empresa Save Yogurt nasce como um 
-                projeto da disciplina de Pesquisa e Inovação, lecionado pelos professores Fernando Brandão e Julia Araújo.</p>
-            </div>
         </div>
     </section>
-    <!-- Fim Sobre Nós -->
+    <!-- Fim Inicio -->
 
-    <!-- Começo Equipe -->
-    <section class="equipe">
-        <h2 class="titulo"> Nossa <span>Equipe</span> </h2>
-
-        <div class="cards_equipe">
-
-            <div class="card">
-                <img src="https://i.pinimg.com/474x/f1/39/dc/f139dc89e5b1ad0818f612c7f33200a5.jpg" alt="">
-                <h3>Eduardo Guaglioni</h3>
-                <p>Função</p>
+    <!-- Custo Invisível -->
+     <section class="custo">
+            <div class="custo_texto">
+            <h1 class="titulo">O custo invisível do calor</h1>
+            <p class="subtitulo">"Onde o monitoramento falha, o lucro derrete"</p>
+            <p>A cada transporte sem supervisão, o risco de perda total aumenta<br>
+            exponencialmente. Pequenas oscilações de temperatura são os vilões<br>
+            silenciosos do seu faturamento.</p>
             </div>
-
-            <div class="card">
-                <img src="https://i.pinimg.com/474x/f1/39/dc/f139dc89e5b1ad0818f612c7f33200a5.jpg" alt="">
-                <h3>Gabriel Veras</h3>
-                <p>Função</p>
+            <div class="div_cards_custo">
+                <div class="vinte">
+                    <h1>20%</h1>
+                    <p>PERDA MÉDIA</p>
+                    <p>na cadeia de frio global sem<br>tecnologia de ponta.</p>
+                </div>
+                <div class="risco">
+                    <i class="fa-sharp fa-solid fa-arrow-trend-down"></i>
+                    <p>RISCO CRÍTICO</p>
+                    <p>Degradação microbiológica<br>indetectável a olho nu.</p>
+                </div>
             </div>
-
-            <div class="card">
-                <img src="https://i.pinimg.com/474x/f1/39/dc/f139dc89e5b1ad0818f612c7f33200a5.jpg" alt="">
-                <h3>João Pedro</h3>
-                <p>Função</p>
-            </div>
-
-            <div class="card">
-                <img src="https://i.pinimg.com/474x/f1/39/dc/f139dc89e5b1ad0818f612c7f33200a5.jpg" alt="">
-                <h3>Maria Eduarda</h3>
-                <p>Função</p>
-            </div>
-
-            <div class="card">
-                <img src="https://i.pinimg.com/474x/f1/39/dc/f139dc89e5b1ad0818f612c7f33200a5.jpg" alt="">
-                <h3>Nicole Rodrigues</h3>
-                <p>Função</p>
-            </div>
-
-            <div class="card">
-                <img src="https://i.pinimg.com/474x/f1/39/dc/f139dc89e5b1ad0818f612c7f33200a5.jpg" alt="">
-                <h3>Pedro Barros</h3>
-                <p>Função</p>
-            </div>
-
-        </div>
     </section>
-    <!-- Fim Equipe -->
+    <!-- Fim Custo Invisível -->
+
+    <!-- Monitoramento -->
+    <h1 class="titulo_monitoramento">Monitoramento Térmico <span>IoT</span></h1>
+     <section class="monitoramento">
+            <div class="card_grande">
+                <div class="card_monitoramento">
+                    <div class="linha_titulo">
+                        <i class="fa-solid fa-chart-area"></i>
+                        <p>Monitoramento Online</p>
+                    </div>
+                    <p>Acompanhe cada fração de grau Celsius através de
+                    sensores inteligentes conectados via satélite.</p>
+                    <img src="https://gtsolucoes.com.br/wp-content/uploads/2015/02/MONITORAMENTO-DE-COMPUTADORES.png">
+                </div>
+            </div>
+            <div class="cards_dois">
+                <div class="alertas">
+                    <div class="linha_titulo">
+                        <i class="fa-solid fa-bell"></i>
+                        <p>Alertas Automáticos</p>
+                    </div>
+                    <p>Notificações instantâneas via SMS e App no momento de
+                    qualquer desvio térmico.</p>
+                </div>
+                <div class="metricas">
+                    <div class="linha_titulo">
+                        <i class="fa-solid fa-award"></i>
+                        <p>Métricas de Qualidade</p>
+                    </div>
+                    <p>Relatórios de conformidade para auditorias e certificações
+                    sanitárias automáticas.</p>
+                </div>
+            </div>
+    </section>
+    <!-- Fim Monitoramento -->
+
+    <!-- Protetor -->
+     <section class="protetor">
+            <div class="imagem">
+                <div class="imagem_card">
+                    <img src="https://www.uai.com.br/uainoticias/wp-content/uploads/2026/01/iogurte-_1768411313572.jpg">
+                    <div class="card">
+                        <p>MISSÃO ARTIC</p>
+                        <p>“Preservar o frescor é um compromisso tecnoligoco“</p>
+                    </div>
+                </div>
+            </div>
+            <div class="textos">
+                <h1>O <span>Protetor</span> do seu Laticínio</h1>
+                <p>Nascemos na interseção entre a tecnologia IoT e a indústria alimentícia. Nosso compromisso é reduzir o desperdício,
+                garantindo que o seu produto chegue à mesa do consumidor exatamente como saiu da fábrica: perfeito.</p>
+                <div class="mini_lista">
+                    <i class="fa-solid fa-circle-check"></i><p>Zero desperdício logístico</p>
+                    <i class="fa-solid fa-circle-check"></i><p>Total transparência de dados</p>
+                    <i class="fa-solid fa-circle-check"></i><p>Sustentabilidade operacional</p>
+                </div>
+            </div>
+    </section>
+    <!-- Fim Protetor -->
 
     <!-- Começo Contato -->
     <section class="faleConosco" id="faleConosco">
@@ -145,7 +173,7 @@
                 <div class="card_contato">
                     <i class="fa-solid fa-location-dot"></i>
                     <h3>Endereço</h3>
-                    <p>Rua Haddock Lobo, 595</p>
+                    <p>Rua Haddock Lobo, 595 - SP</p>
                 </div>
 
                 <div class="card_contato">
@@ -173,22 +201,27 @@
 
     <footer>
         <div class="footer_brand">
+        <img src="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
         <h2>Save Yogurt</h2>
-        <p>© 2026 Save Yogurt Todos os direitos reservados.</p>
+        <p>© 2026 Save Yogurt<br>Todos os direitos reservados.</p>
     </div>
 
     <div class="footer_col">
         <span>LINKS RÁPIDOS</span>
-        <a href="#">Sobre Nós</a>
-        <a href="#">Produtos</a>
-        <a href="#">Integrantes</a>
+        <a href="#">Início</a>
+        <a href="#">Custo Invisível</a>
+        <a href="#">Monitoramento</a>
+        <a href="#">Nossos Valores</a>
+        <a href="#">Fale Conosco</a>
     </div>
 
     <div class="footer_col">
-        <span>SUPORTE</span>
-        <a href="#">Contatos</a>
-        <a href="#">Endereço</a>
-        <a href="#">FAQ</a>
+        <span>PÁGINAS</span>
+        <a href="index.html">Landing Page</a>
+        <a href="simulador.html">Simulador</a>
+        <a href="cadastro_login.html">Cadastrar</a>
+        <a href="login.html">Login</a>
+        <a href="sobre_nos.html">Sobre Nós</a>
     </div>
 
     <div class="footer_col">
