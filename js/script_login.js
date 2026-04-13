@@ -27,9 +27,7 @@ function cadastro_realizado() {
     resultado.style.color = "green";
     resultado.innerHTML = `Cadastro realizado com sucesso!`;
 
-    setTimeout(() => {
-        window.location.href = "login.html";
-    }, 2500);
+    window.location.href = "login.html";
 }
 
 
@@ -58,10 +56,8 @@ function login() {
     else {
         resultado.innerHTML = "Login confirmado!";
         resultado.style.color = "green";
-        
-        setTimeout(() => {
-            window.location.href = "dashboard.html"; 
-        }, 1000);
+
+        window.location.href = "dashboard.html";  
     }
 }
 
