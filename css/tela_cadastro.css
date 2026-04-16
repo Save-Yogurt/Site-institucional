@@ -116,12 +116,12 @@ header {
 /* Fim Header */
 
 .container_principal {
-    flex: 1;
+    flex: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 80px; 
-    padding-bottom: 40px;
+    margin-top: 109px;
+    margin-bottom: 40px;
 }
 
 .card_auth {

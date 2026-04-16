@@ -970,12 +970,12 @@ header {
     cursor: pointer;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
     .card_contato p {
         font-size: 11px;
     }
 }
-@media (max-width: 429px) {
+@media (max-width: 500px) {
     .card_contato p {
         font-size: 10px;
     }

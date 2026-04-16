@@ -16,7 +16,10 @@
     <!-- HEADER  -->
 <header>
     <div id="div_logo">
-        <p id="logo">Save Yogurt</p>
+        <a href="index.html">
+        <img src="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+        <p id="logo_titulo">Save Yogurt</p>
+        </a>
     </div>
     <div id="div_links">
         <a href="dashboard.html">
@@ -33,176 +36,121 @@
     </div>
 </header>
 
-    <!-- box de cima-->
-    <div class="box-superior">
-        <div class="titulo-grafico">
-            <h1>Medição da Temperatura do Lote</h1>
-            <p class="status">🟢 Conectado - Sensor #4421</p>
-        </div>
+    <div class="main">
 
-        <select class="opcoes_sensores">
-            <option>Sensor #24</option>
-            <option>Sensor #25</option>
-            <option>Sensor #26</option>
-        </select>
+    <div class="titulo-sensor">
+        <h1>Dashboard</h1>
     </div>
 
-    <!-- Possivel alerta -->
-    <div class="alerta">
-        <div>
-            <strong> Alerta de Temperatura!</strong>
-            <p>A temperatura ultrapassou o limite de segurança.</p>
+    <div class="cards">
+        <div class="card">
+            <strong>Temperatura média todos sensores</strong>
+            <div>4°C</div>
+        </div>
+        <div class="card">
+            <strong>Sensores funcionando</strong>
+            <div>14</div>
+        </div>
+        <div class="card">
+            <strong>Sensores em manutenção</strong>
+            <div>2</div>
+        </div>
+        <div class="card alerta">
+            <strong>Sensores em alerta</strong>
+            <div>1</div>
         </div>
     </div>
 
-    <!-- parte de baixo -->
-    <div class="box-inferior">
-
-        <!-- GRAFICO  -->
-        <div class="grafico">
-            <h3>Curva Térmica - Carga Atual</h3>
-            <p class="sub">Atualizado há 30 segundos</p>
-
-            <canvas id="grafico_temperatura"></canvas>
-
-            <div class="info-grafico">
-                <p>Média: <strong>5.4°C</strong></p>
-                <p class="critico">Status: Crítico</p>
-                <button class="btn-sec">Relatório Completo</button>
-            </div>
-        </div>
-
-        <!-- TEMPERATURA box da esquerda  -->
-        <div class="temperatura">
-            <p>🌡 Temperatura Atual</p>
-            <h2>8.4°C</h2>
-            <span>+2.1°C nos últimos 15 min</span>
-        </div>
-
+    <div class="graficos">
+<div class="graficos">
+    <div class="grafico">
+        <h3>Temperatura média todos os sensores (hora)</h3>
+        <canvas id="lineChart" style="height: 300px;width:400px;"></canvas>
     </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer_brand">
-            <h2>Save Iogurte</h2>
-            <p>© 2026 Save Iogurte.</p>
-        </div>
+    <div class="grafico">
+        <h3>Alertas por sensor (mês)</h3>
+        <canvas id="barChart" style="height: 300px;width:400px;"></canvas>
+    </div>
 
-        <div class="footer_col">
-            <span>EMPRESA</span>
-            <a href="#">Sobre Nós</a>
-            <a href="#">Produtos</a>
-            <a href="#">Integrantes</a>
-        </div>
-
-        <div class="footer_col">
-            <span>SUPORTE</span>
-            <a href="#">Contatos</a>
-            <a href="#">Endereço</a>
-            <a href="#">FAQ</a>
-        </div>
-
-        <div class="footer_col">
-            <span>SOCIAL</span>
-            <div class="footer_icons">
-                <img src="img/compartilhar.png">
-                <img src="img/terra-icon.png">
-                <img src="img/mail.png">
-            </div>
-        </div>
-    </footer>
+</div>
 
 </body>
 
 <script>
-// gráfico
-    const data = {
-        labels: ['01:00', '02:00', '03:00', '04:00', '05:00', '06:00', '07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '00:00'],
-        datasets: [{
-            label: 'Temperatura',
-            data: [3, 7, 12, 5, 9, 1, 11, 6, 8, 2, 10, 13, 4, 13, 2, 9, 6, 11, 1, 8, 5, 12, 3, 10],
+const ctx1 = document.getElementById('lineChart');
 
-            borderColor: '#0491a4',
-            borderWidth: 3,
-
-            tension: 0.4, // curva da linha
-
-            pointRadius: 0, // tira as bolinhas
-        }]
-    };
-
-    // cria o gráfico
-    const grafico_temperatura = new Chart(
-        document.getElementById('grafico_temperatura'),
-        {
-            type: 'line',
-            data: data,
-
-            options: {
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: {display: false}
-                    },
-                    y: {
-                        min: 0,
-                        max: 12,
-                        grid: {color: '#eee'},
-                        ticks: {callback: (value) => value + '°C'}
-                    }
-                }
-
+new Chart(ctx1, {
+    type: 'line',
+    data: {
+        labels: ["12:00", "13:00", "14:00", "15:00", "16:00", "17:00"],
+        datasets: [
+            {
+                label: "Temperatura (°C)",
+                data: [2, 4, 3, 6, 5, 4],
+                borderColor: "#006876",
+                backgroundColor: "#006876",
+                borderWidth: 2,
+                tension: 0.3,
+                fill: false,
+                zIndex: 5 // Linha fica na frente de tudo
             },
-
-            // faixas de cor
-            plugins: [
-                {
-                    id: 'faixa',
-                    beforeDraw: (chart) => {
-
-                        const { ctx, chartArea, scales } = chart
-                        const y = scales.y
-
-                        ctx.save()
-
-                        // ideal (4 a 8)
-                        // cor
-                        ctx.fillStyle = 'rgba(0, 0, 255, 0.1)'
-                        // faixa
-                        ctx.fillRect(
-                            chartArea.left,
-                            y.getPixelForValue(8),
-                            // onde vai estar localizada
-                            chartArea.right - chartArea.left,
-                            y.getPixelForValue(4) - y.getPixelForValue(8)
-                        )
-
-                        //  Alerta(+8)
-                        ctx.fillStyle = '#f8d7da'
-                        ctx.fillRect(
-                            chartArea.left,
-                            chartArea.top,
-                            chartArea.right - chartArea.left,
-                            y.getPixelForValue(8) - chartArea.top
-                        )
-                        // Alerta (-4)
-                        ctx.fillRect(
-                            chartArea.left,
-                            y.getPixelForValue(4),
-                            chartArea.right - chartArea.left,
-                            chartArea.bottom - y.getPixelForValue(4)
-                        )
-                        ctx.restore()
-
-                    }
-                }
-            ]
+            {
+                // ÂNCORA PARA O TOPO (Acima de 8)
+                label: 'Alerta Superior',
+                data: [8, 8, 8, 8, 8, 8], // Linha reta no 8
+                fill: 'end', // Pinta do 8 até o FINAL (topo) do gráfico
+                backgroundColor: 'rgba(255, 0, 0, 0.3)',
+                pointRadius: 0,
+                borderWidth: 0
+            },
+            {
+                // ÂNCORA PARA A BASE (Abaixo de 0)
+                label: 'Alerta Inferior',
+                data: [0, 0, 0, 0, 0, 0], // Linha reta no 0
+                fill: 'start', // Pinta do 0 até o INÍCIO (chão) do gráfico
+                backgroundColor: 'rgba(255, 0, 0, 0.3)',
+                pointRadius: 0,
+                borderWidth: 0
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                min: -2,
+                max: 10
+            }
         }
-    )
+    }
+});
+
+const ctx2 = document.getElementById('barChart');
+
+new Chart(ctx2, {
+    type: 'bar',
+    data: {
+        labels: ["Sensor1","Sensor2","Sensor3","Sensor4","Sensor5","Sensor6","Sensor7","Sensor8","Sensor9","Sensor10","Sensor11","Sensor12","Sensor13","Sensor14","Sensor15","Sensor16"],
+        datasets: [
+            {
+                label: "Alertas",
+                data: [1, 0, 4, 0, 1, 3, 0, 3, 1, 1, 0, 2, 0, 0, 1, 2],
+                backgroundColor: "#df4242"
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                min: 0,
+                max: 5
+            }
+        }
+    }
+});
+    
 </script>
 
 </html>
