@@ -64,13 +64,35 @@
     <div class="graficos">
 <div class="graficos">
     <div class="grafico">
-        <h3>Temperatura média todos os sensores (hora)</h3>
+        <div class="titulo-sensor">
+        <h3>Temperatura (hora)</h3>
+        <select id="input_sensor" name="sensor">
+            <option value="1" selected>Sensor 1</option>
+            <option value="2">Sensor 2</option>
+            <option value="3">Sensor 3</option>
+            <option value="4">Sensor 4</option>
+            <option value="5">Sensor 5</option>
+            <option value="6">Sensor 6</option>
+            <option value="7">Sensor 7</option>
+            <option value="8">Sensor 8</option>
+            <option value="9">Sensor 9</option>
+            <option value="10">Sensor 10</option>
+            <option value="11">Sensor 11</option>
+            <option value="12">Sensor 12</option>
+            <option value="13">Sensor 13</option>
+            <option value="14">Sensor 14</option>
+            <option value="15">Sensor 15</option>
+            <option value="16">Sensor 16</option>
+        </select><br><br>
+    </div>
         <canvas id="lineChart" style="height: 300px;width:400px;"></canvas>
     </div>
 
     <div class="grafico">
-        <h3>Alertas por sensor (mês)</h3>
-        <canvas id="barChart" style="height: 300px;width:400px;"></canvas>
+            <div class="titulo-sensor">
+                <h3>Alertas por sensor (mês)</h3>
+            </div>
+            <canvas id="barChart" style="height: 300px;width:400px;"></canvas>
     </div>
 
 </div>
@@ -83,32 +105,32 @@ const ctx1 = document.getElementById('lineChart');
 new Chart(ctx1, {
     type: 'line',
     data: {
-        labels: ["12:00", "13:00", "14:00", "15:00", "16:00", "17:00"],
+        labels: ["10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"],
         datasets: [
             {
                 label: "Temperatura (°C)",
-                data: [2, 4, 3, 6, 5, 4],
+                data: [4, 3, 5, 4, 3, 4, 2, 4],
                 borderColor: "#006876",
                 backgroundColor: "#006876",
                 borderWidth: 2,
                 tension: 0.3,
                 fill: false,
-                zIndex: 5 // Linha fica na frente de tudo
+                zIndex: 5 
             },
             {
-                // ÂNCORA PARA O TOPO (Acima de 8)
+                // ancora topo
                 label: 'Alerta Superior',
-                data: [8, 8, 8, 8, 8, 8], // Linha reta no 8
-                fill: 'end', // Pinta do 8 até o FINAL (topo) do gráfico
+                data: [5, 5, 5, 5, 5, 5, 5, 5],
+                fill: 'end',
                 backgroundColor: 'rgba(255, 0, 0, 0.3)',
                 pointRadius: 0,
                 borderWidth: 0
             },
             {
-                // ÂNCORA PARA A BASE (Abaixo de 0)
+                // ancora base
                 label: 'Alerta Inferior',
-                data: [0, 0, 0, 0, 0, 0], // Linha reta no 0
-                fill: 'start', // Pinta do 0 até o INÍCIO (chão) do gráfico
+                data: [2, 2, 2, 2, 2, 2, 2, 2],
+                fill: 'start',
                 backgroundColor: 'rgba(255, 0, 0, 0.3)',
                 pointRadius: 0,
                 borderWidth: 0
@@ -119,8 +141,8 @@ new Chart(ctx1, {
         responsive: true,
         scales: {
             y: {
-                min: -2,
-                max: 10
+                min: 0,
+                max: 7
             }
         }
     }

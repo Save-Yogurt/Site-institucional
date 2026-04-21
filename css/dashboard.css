@@ -127,7 +127,7 @@ a:hover {
             margin-right: 30px;
         }
 
-        .titulo-sensor h1 {
+        .titulo-sensor h3 {
             color: #201c19;
             font-weight: 700;
         }
@@ -147,12 +147,6 @@ a:hover {
 
         #input_sensor:hover {
             border-color: #008fa1;
-        }
-
-        #input_sensor:focus {
-            outline: none;
-            box-shadow: 0 0 4px #00BCD4;
-            border-color: #00BCD4;
         }
         
         .cards {
@@ -221,16 +215,6 @@ a:hover {
         .grafico:hover {
             box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
         }
-        
-        .grafico h3 {
-            margin: 0 0 15px 0;
-            font-size: 1.1rem;
-            color: #201c19;
-            font-weight: 600;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(32, 28, 25, 0.1);
-        }
-        
         
         /* Responsividade */
         @media (max-width: 768px) {

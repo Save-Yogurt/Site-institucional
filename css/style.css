@@ -1027,7 +1027,7 @@ footer {
     display: flex; 
     flex-direction: column; 
     gap: 10px; 
-    margin-right: 8%;
+    margin-right: 3%;
 }
 
 .footer_col span { 
