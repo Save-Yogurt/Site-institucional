@@ -44,10 +44,6 @@
 
     <div class="cards">
         <div class="card">
-            <strong>Temperatura média todos sensores</strong>
-            <div>4°C</div>
-        </div>
-        <div class="card">
             <strong>Sensores funcionando</strong>
             <div>14</div>
         </div>
@@ -58,6 +54,10 @@
         <div class="card alerta">
             <strong>Sensores em alerta</strong>
             <div>1</div>
+        </div>
+        <div class="card">
+            <strong>Sensores em estado crítico</strong>
+            <div>0</div>
         </div>
     </div>
 
@@ -109,7 +109,7 @@ new Chart(ctx1, {
         datasets: [
             {
                 label: "Temperatura (°C)",
-                data: [4, 4, 5, 4, 4, 3, 4, 4],
+                data: [3, 3.4, 3.4, 3.9, 3.4, 2.9, 3.4, 3.4],
                 borderColor: "#006876",
                 backgroundColor: "#006876",
                 borderWidth: 2,
@@ -119,19 +119,19 @@ new Chart(ctx1, {
             },
             {
                 // ancora topo - alerta vermelho
-                label: 'Alerta Vermelho',
-                data: [10, 10, 10, 10, 10, 10, 10, 10],
+                label: 'Crítico',
+                data: [7, 7, 7, 7, 7, 7, 7, 7],
                 fill: 'end', //preenche até o final
-                backgroundColor: '#ff2a007a',
+                backgroundColor: '#ff0000ba',
                 pointRadius: 0,
                 borderWidth: 0
             },
             {
                 // ancora topo - alerta amarelo
-                label: 'Alerta Amarelo',
+                label: 'Alerta',
                 data: [5, 5, 5, 5, 5, 5, 5, 5],
                 fill: 1, //preenche até o começo do dataset 1
-                backgroundColor: '#fdfd038f',
+                backgroundColor: '#ff000089',
                 pointRadius: 0,
                 borderWidth: 0
             },
@@ -139,7 +139,7 @@ new Chart(ctx1, {
                 // ancora base - alerta amarelo
                 data: [2, 2, 2, 2, 2, 2, 2, 2],
                 fill: 4, //preenche até o começo do dataset 4
-                backgroundColor: '#fdfd038f',
+                backgroundColor: '#ff000089',
                 pointRadius: 0,
                 borderWidth: 0
             },
@@ -147,10 +147,10 @@ new Chart(ctx1, {
                 // ancora base - alerta vermelho
                 data: [0, 0, 0, 0, 0, 0, 0, 0],
                 fill: 'start', //preenche até o começo
-                backgroundColor: '#ff2a007a',
+                backgroundColor: '#ff0000ba',
                 pointRadius: 0,
                 borderWidth: 0
-            }
+            },
         ]
     },
     options: {
@@ -166,8 +166,8 @@ new Chart(ctx1, {
     },
         scales: {
             y: {
-                min: -3,
-                max: 13
+                min: -2,
+                max: 9
             }
         }
     }
@@ -183,7 +183,7 @@ new Chart(ctx2, {
             {
                 label: "Alertas",
                 data: [1, 0, 4, 0, 1, 3, 0, 3, 1, 1, 0, 2, 0, 0, 1, 2],
-                backgroundColor: "#df4242"
+                backgroundColor: "#006876"
             }
         ]
     },
