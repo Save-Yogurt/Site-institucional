@@ -118,20 +118,38 @@ new Chart(ctx1, {
                 zIndex: 5 
             },
             {
-                // ancora topo
-                label: 'Alerta Superior',
+                // ancora topo - alerta critico
+                label: 'Alerta Crítico',
                 data: [5, 5, 5, 5, 5, 5, 5, 5],
                 fill: 'end',
-                backgroundColor: 'rgba(255, 0, 0, 0.3)',
+                backgroundColor: '#f2444485',
                 pointRadius: 0,
                 borderWidth: 0
             },
             {
-                // ancora base
-                label: 'Alerta Inferior',
+                // ancora topo - alerta perigo
+                label: 'Alerta de Perigo',
+                data: [10, 10, 10, 10, 10, 10, 10, 10],
+                fill: 'end',
+                backgroundColor: '#f24444cb',
+                pointRadius: 0,
+                borderWidth: 0
+            },
+            {
+                // ancora base - alerta critico
+                label: 'Alerta Crítico',
                 data: [2, 2, 2, 2, 2, 2, 2, 2],
                 fill: 'start',
-                backgroundColor: 'rgba(255, 0, 0, 0.3)',
+                backgroundColor: '#0a5aef95',
+                pointRadius: 0,
+                borderWidth: 0
+            },
+            {
+                // ancora base - alerta congelamento
+                label: 'Alerta de Congelamento',
+                data: [0, 0, 0, 0, 0, 0, 0, 0],
+                fill: 'start',
+                backgroundColor: '#0a5aefba',
                 pointRadius: 0,
                 borderWidth: 0
             }
@@ -141,8 +159,8 @@ new Chart(ctx1, {
         responsive: true,
         scales: {
             y: {
-                min: 0,
-                max: 7
+                min: -3,
+                max: 13
             }
         }
     }
