@@ -38,51 +38,94 @@ function login() {
 
     let email_salvo = sessionStorage.getItem("email_acesso");
     let senha_salva = sessionStorage.getItem("senha_acesso");
+    let contador = 2 ;
 
-    if (email == "" || senha == "") {
-        resultado.innerHTML = "Todos os campos devem ser preenchidos.";
-        resultado.style.color = "red";
-    } 
 
-    else if (!email_salvo || !senha_salva) {
-        resultado.innerHTML = "Nenhum usuário cadastrado. Faça o cadastro primeiro!";
-        resultado.style.color = "red";
+
+
+
+
+// 1 1 2 2 3 3
+    for (let i = 0; i > contardor; i++) {
+
+        if (email == email_salvo && senha == senha_salva) {
+            resultado.innerHTML = "Login confirmado!";
+            resultado.style.color = "green";
+
+            window.location.href = "dashboard.html";
+            break;
+
+        } else {
+            resultado.innerHTML = "Email ou Senha incorretas. Tente novamente";
+            resultado.style.color = "red";
+            contador++
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
     }
 
-    else if (email !== email_salvo || senha !== senha_salva) {
-        resultado.innerHTML = "Email ou Senha incorretas.";
-        resultado.style.color = "red";
-    } 
-    else {
-        resultado.innerHTML = "Login confirmado!";
-        resultado.style.color = "green";
 
-        window.location.href = "dashboard.html";  
+
+
+
+    //     if (email !== email_salvo || senha !== senha_salva) {
+    //             for (i = 0; i < 3; i++) {
+    //             resultado.innerHTML = "Email ou Senha incorretas. Tente novamente";
+    //             resultado.style.color = "red";
+    //             contador++
+    //         }
+    //     }
+    //     if(contador ==3){
+    //         resultado.innerHTML = 'Usuário bloqueado'
+    //     }
+
+    //         if (email == "" || senha == "") {
+    //             resultado.innerHTML = "Todos os campos devem ser preenchidos.";
+    //             resultado.style.color = "red";
+    //         }
+
+    //         else {
+    //             resultado.innerHTML = "Login confirmado!";
+    //             resultado.style.color = "green";
+
+    //             window.location.href = "dashboard.html";
+    //             break;
+    //         }
+    // }
+
+    function redefinir() {
+        let email_informado = ipt_email_redefinir.value;
+        let senha_nova = ipt_nova_senha.value;
+        let senha_confirmada = ipt_confirmar_senha.value;
+
+        let email_salvo = sessionStorage.getItem("email_acesso");
+
+        if (email_informado !== email_salvo) {
+            resultado.innerHTML = "Esse e-mail não possui uma conta!";
+            resultado.style.color = "red";
+            return;
+        }
+
+        if (senha_confirmada === senha_nova && senha_nova !== "") {
+
+            sessionStorage.setItem("senha_acesso", senha_confirmada);
+
+            resultado.innerHTML = "Senha alterada com sucesso!";
+            resultado.style.color = "green";
+            window.location.href = "login.html";
+        } else {
+            resultado.innerHTML = "Senhas não conhecidem!";
+            resultado.style.color = "red";
+        }
     }
-}
-
-function redefinir() {
-    let email_informado = ipt_email_redefinir.value;
-    let senha_nova = ipt_nova_senha.value;
-    let senha_confirmada = ipt_confirmar_senha.value;
-    
-    let email_salvo = sessionStorage.getItem("email_acesso");
-
-    if (email_informado !== email_salvo) {
-        resultado.innerHTML = "Esse e-mail não possui uma conta!";
-        resultado.style.color = "red";
-        return;
-    }
-
-    if (senha_confirmada === senha_nova && senha_nova !== "") {
-
-        sessionStorage.setItem("senha_acesso", senha_confirmada);
-        
-        resultado.innerHTML = "Senha alterada com sucesso!";
-        resultado.style.color = "green";
-        window.location.href = "login.html";
-    } else {
-        resultado.innerHTML = "Senhas não conhecidem!";
-        resultado.style.color = "red";
-    }
-}
