@@ -65,7 +65,9 @@ function login() {
     for (let i = 0; i < erros.length; i++) {
         if (i == 2) {
             alert("Você excedeu o número de tentativas. Acesso bloqueado!");
-            return false;
+            acertou = false;
+            botao_acao.style.display = "none"
+            break
         }
     }
 
