@@ -105,7 +105,7 @@
             <label>Porcentagem de perdas na cadeia fria (%)</label>
             <input class="inputs" type="text" id="ipt_taxa_perda" placeholder="PORCENTAGEM QUE VOCÊ QUER TRABALHAR"><br>
 
-            <label>Valor médio da tonelada de iogurte (R$)</label>
+            <label>Valor médio do quilo(Kg) de iogurte (R$)</label>
             <input class="inputs" type="text" id="ipt_valor_medio" placeholder="PREÇO DO KG"><br>
 
             <button id="botao_formulario" onclick="calcular()">Calcular Retorno</button>
@@ -158,18 +158,17 @@
     let valorCarga = Number(ipt_valor_medio.value);
 
     // Cálculos base
-    let cargasPerdidas = volume * taxaPerda;
+    let cargasPerdidas = (volume * 1000) * taxaPerda;
     let perdaFinanceira = cargasPerdidas * valorCarga;
 
     // Cenários reais de mercado
-    let minimo = 0.30;    // 30%
-    let realista = 0.55;  // 55%
-    let otimista = 0.80;  // 80%
+    let Realista = 0.30;    // 30%
+    let Otimista = 0.55;  // 55%
+
 
     // Economias por cenário
-    let economiaMinima = perdaFinanceira * minimo;
-    let economiaRealista = perdaFinanceira * realista;
-    let economiaOtimista = perdaFinanceira * otimista;
+    let economiaRealista = perdaFinanceira * Realista;
+    let economiaOtimista = perdaFinanceira * Otimista;
 
     resultado.innerHTML = `
         <h3>Resultados Baseados em Estudos Reais</h3>
@@ -178,17 +177,14 @@
         R$ ${perdaFinanceira.toFixed(2)}
         (R$ ${(perdaFinanceira / 1000000).toFixed(2)} milhões)<br><br>
 
-        <strong>Cenário Mínimo (30% de redução):</strong><br>
-        Economia estimada: R$ ${economiaMinima.toFixed(2)}
-        (R$ ${(economiaMinima / 1000000).toFixed(2)} milhões)<br><br>
-
-        <strong>Cenário Realista (55% de redução):</strong><br>
+        <strong>Cenário Realista (30% de redução):</strong><br>
         Economia estimada: R$ ${economiaRealista.toFixed(2)}
         (R$ ${(economiaRealista / 1000000).toFixed(2)} milhões)<br><br>
 
-        <strong>Cenário Otimista (80% de redução):</strong><br>
+        <strong>Cenário Otimista (55% de redução):</strong><br>
         Economia estimada: R$ ${economiaOtimista.toFixed(2)}
         (R$ ${(economiaOtimista / 1000000).toFixed(2)} milhões)<br><br>
+
     `;
 }
     </script>
