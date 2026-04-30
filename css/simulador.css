@@ -254,6 +254,9 @@ main{
     border-radius: 20px;
     flex-direction: column;
 }
+#resultado img{
+    width: 300px;
+}
 footer {
     display: flex;
     justify-content: space-between;

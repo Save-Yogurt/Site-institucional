@@ -54,7 +54,7 @@ function login() {
     if (email == email_salvo && senha == senha_salva) {
         resultado.innerHTML = "Login confirmado!";
         resultado.style.color = "green";
-        window.location.href = "dashboard.html";
+        window.location.href = "dash-geral.html";
         acertou = true
 
     } else {

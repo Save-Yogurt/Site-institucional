@@ -1,83 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-
-* {
-    font-family: 'Manrope', sans-serif;
-}
-body {
-    background-color: #f5f7f8;
-    font-family: 'Manrope', sans-serif;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header */
-header {
-    height: 69px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
-    background-color: white; 
-}
-
-#div_logo a{
-    margin-left: 32px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
-#div_logo img{
-    width: 60px;
-    margin-bottom: 5px;
-}
-
-#logo_titulo{
-    font-size: 24px;
-    font-weight: 800;
-    color: #00BCD4;
-}
-
-#div_links {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    font-size: 14px;
-}
-
-#div_botoes {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    margin-right: 32px;
-}
-
-.botoes {
-    border: none;
-    font-size: 14px;
-    font-weight: bold;
-    width: 130px;
-    height: 36px;
-    border-radius: 50px;
-    background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
-    color: white;
-    cursor: pointer;
-}
-a{
-    text-decoration: none;
-    color: inherit;   
-    transition: 0.2s;
-}
-a:hover {
-    color: #00BCD4;
-}
-
-.main {
+ * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            margin: 0;
+            background: #eee;
+            color: #201c19;
+            height: 100vh;
+            display: flex;
+        }
+        
+        .sidebar {
+            width: 250px;
+            background: linear-gradient(180deg, #201c19, #3a342f);
+            color: #eee;
+            padding: 25px 15px;
+            box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .sidebar-content {
             flex: 1;
-            padding: 0px 100px 0px 100px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .sidebar-content img {
+            width: 100px;
+        }
+        
+        .sidebar-content h2 {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #006876;
+            text-align: center;
+            color: #00BCD4;
+        }
+
+        .sidebar-content a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .sidebar div.menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .sidebar div.menu-item:hover {
+            background: #006876;
+            transform: translateX(5px);
+        }
+
+        .sidebar div.menu-item-selected {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            background: #006876;
+        }
+        
+        .sidebar div.menu-item-selected:hover {
+            transform: translateX(5px);
+        }
+
+        .menu-text {
+            flex: 1;
+            text-align: center; /* texto no meio */
+        }
+        
+        .logout-section {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .logout-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        
+        .logout-btn:hover {
+            background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px #006876;
+        }
+        
+        .logout-btn:active {
+            transform: translateY(0);
+        }
+        
+        .main {
+            flex: 1;
+            padding: 30px;
             overflow: auto;
             background-color: whitesmoke;
             position: relative;
@@ -123,13 +177,15 @@ a:hover {
             gap: 15px;
             
             margin-bottom: 25px;
+            padding-bottom: 10px;
             border-bottom: 2px solid rgba(32, 28, 25, 0.1);
-            margin-right: 30px;
+            margin-right: 50px;
         }
 
         .titulo-sensor h3 {
             color: #201c19;
             font-weight: 700;
+            font-size: 20px;
         }
 
         #input_sensor {
@@ -147,6 +203,23 @@ a:hover {
 
         #input_sensor:hover {
             border-color: #008fa1;
+        }
+
+        #input_sensor:focus {
+            outline: none;
+            box-shadow: 0 0 4px #00BCD4;
+            border-color: #00BCD4;
+        }
+
+        .chart-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+            height: 400px;
+            width: 100%;
+            margin: auto;
         }
         
         .cards {
@@ -183,6 +256,14 @@ a:hover {
             color: #006876;
             font-weight: 700;
             font-size: 28px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card div p {
+            color: #006876;
+            font-weight: 700;
+            font-size: 14px;
         }
 
         .alerta {
@@ -257,10 +338,6 @@ a:hover {
                 display: block;
             }
             
-            .desktop-logout {
-                display: none;
-            }
-            
             .main h1 {
                 margin-right: 0;
             }
@@ -273,3 +350,87 @@ a:hover {
                 min-width: 100%;
             }
         }
+
+/* Cadastro do Lote */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bloco_maior {
+    width: 700px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03); 
+}
+
+.titulo_secao {
+    font-size: 18px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.grupo_input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+    margin-bottom: 20px; 
+    width: 100%;
+}
+
+.grupo_input label {
+    font-size: 13px;
+    color: #555;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    font-family: inherit;
+    border: 1px solid #d1d5db; 
+    border-radius: 12px;
+    background-color: #f8f9fa; 
+    outline: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.inputs_lado_a_lado {
+    display: flex;
+    gap: 20px; 
+    width: 100%;
+}
+
+.inputs_lado_a_lado .grupo_input {
+    flex: 1; 
+    margin-bottom: 0; 
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #f0f0f0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.botao {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    background-color: #00A7B5;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.botao:hover {
+    background-color: #008f9c;
+}

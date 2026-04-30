@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cadastro de Itens</title>
+    
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Darker+Grotesque:wght@300..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <!-- Link FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="css/dashboard.css">
+    
+</head>
+<body>
+
+ <body>
+
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <img src="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+            <h2>Save Yogurt Admin</h2>
+            <a href="dash-geral.html">
+                <div class="menu-item"> 
+                    <i class="fa-solid fa-chart-bar" style="color: #00BCD4"></i> 
+                    <span class="menu-text">Dashboard Geral</span>
+                </div>
+            </a>
+            <a href="dash-sensor.html">
+                <div class="menu-item"> 
+                    <i class="fa-solid fa-microchip" style="color: #00BCD4;"></i>  
+                    <span class="menu-text">Sensores</span>
+                </div>
+            </a>
+            <a href="dash-cad.html">
+                <div class="menu-item-selected"> 
+                    <i class="fa-solid fa-boxes-stacked" style="color: #00BCD4;"></i>
+                    <span class="menu-text">Cadastro de itens</span>
+                </div>
+            </a>
+        </div>
+        <div class="logout-section">
+            <button type="button" class="logout-btn" onclick="window.location.href='index.html'">
+                Sair do Sistema
+            </button>
+        </div>
+    </div>
+
+<div class="main">
+
+    <div class="titulo-sensor">
+        <h1>Cadastro de Itens</h1>
+    </div>
+
+    <div class="container">
+
+    <div id="bloco_maior">
+
+        <h3 class="titulo_secao">Informações do Lote</h3>
+        
+        <div class="grupo_input">
+            <label>Número do Lote</label>
+            <input type="text" id="id_numero_lote" placeholder="Ex: LT-2026-001">
+        </div>
+
+        <div class="inputs_lado_a_lado">
+            <div class="grupo_input">
+                <label>Data de Produção</label>
+                <input type="date" id="id_data_producao">
+            </div>
+            <div class="grupo_input">
+                <label>Data de Validade</label>
+                <input type="date" id="id_data_validade">
+            </div>
+        </div>
+
+        <br>
+
+        <h3 class="titulo_secao">Informações dos Pallets</h3>
+
+        <div class="inputs_lado_a_lado">
+            <div class="grupo_input">
+                <label>Peso (kg)</label>
+                <input type="number" id="id_peso" placeholder="Ex: 500">
+            </div>
+            <div class="grupo_input">
+                <label>Quantidade de Pallets</label>
+                <input type="number" id="id_qtd_pallets" placeholder="Ex: 10">
+            </div>
+        </div>
+        <button class="botao" onclick="Lote()">Salvar Lote</button>
+
+    </div>
+
+    </div>
+
+</body>
+</html>

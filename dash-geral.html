@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard Geral</title>
+    
+    <!-- Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&family=Darker+Grotesque:wght@300..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <!-- Link FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="css/dashboard.css">
+    
+</head>
+<body>
+
+ <body>
+
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <img src="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+            <h2>Save Yogurt Admin</h2>
+            <a href="dash-geral.html">
+                <div class="menu-item-selected"> 
+                    <i class="fa-solid fa-chart-bar" style="color: #00BCD4"></i> 
+                    <span class="menu-text">Dashboard Geral</span>
+                </div>
+            </a>
+            <a href="dash-sensor.html">
+                <div class="menu-item"> 
+                    <i class="fa-solid fa-microchip" style="color: #00BCD4;"></i>  
+                    <span class="menu-text">Sensores</span>
+                </div>
+            </a>
+            <a href="dash-cad.html">
+                <div class="menu-item"> 
+                    <i class="fa-solid fa-boxes-stacked" style="color: #00BCD4;"></i>
+                    <span class="menu-text">Cadastro de itens</span>
+                </div>
+            </a>
+        </div>
+        <div class="logout-section">
+            <button type="button" class="logout-btn" onclick="window.location.href='index.html'">
+                Sair do Sistema
+            </button>
+        </div>
+    </div>
+
+<div class="main">
+
+    <div class="titulo-sensor">
+        <h1>Dashboard Geral</h1>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <strong>Quantidade de sensores</strong>
+            <div>17</div>
+        </div>
+        <div class="card">
+            <strong>Quantidade de Alertas-30 dias</strong>
+            <div>23</div>
+        </div>
+        <div class="card">
+            <strong>Sensor com mais manutenções</strong>
+            <div>Sensor11 <p>(4 manutenções)</p></div>
+        </div>
+        <div class="card">
+            <strong>Último sensor instalado</strong>
+            <div>Sensor17</div>
+        </div>
+    </div>
+
+    <div class="graficos">
+<div class="graficos">
+    <div class="grafico">
+        <div class="titulo-sensor">
+        <h3>Estado dos Sensores</h3>
+    </div>
+        <div class="chart-container">
+            <canvas id="pieChart"></canvas>
+        </div>
+    </div>
+
+    <div class="grafico">
+            <div class="titulo-sensor">
+                <h3>Horários com mais alertas (mês)</h3>
+                <select id="input_sensor" name="sensor">
+                    <option value="82025">Agosto 2025</option>
+                    <option value="92025">Setembro 2025</option>
+                    <option value="102025">Outubro 2025</option>
+                    <option value="112025">Novembro 2025</option>
+                    <option value="122025">Dezembro 2025</option>
+                    <option value="12026">Janeiro 2026</option>
+                    <option value="22026">Fevereiro 2026</option>
+                    <option value="32026">Março 2026</option>
+                    <option value="42026">Abril 2026</option>
+                    <option value="52026" selected>Maio 2026</option>
+                </select><br><br>
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="lineChart"></canvas>
+            </div>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx1 = document.getElementById('pieChart');
+
+const detalhesSensores = [
+    "Sensores: S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14", // fatia Ideal
+    "Sensores: S15, S16", // fatia em Manutenção
+    "Sensores: S17", // fatia em alerta
+    "Nenhum sensor crítico" // fatia crítica
+];
+
+new Chart(ctx1, {
+    type: 'pie',
+    data: {
+        labels: ["Sensores dentro do ideal", "Sensores em manutenção", "Sensores em alerta", "Sensores em estado crítico"],
+        datasets: [
+            {
+                data: [14, 2, 1, 0],
+                // Cores para cada fatia da pizza
+                backgroundColor: [
+                    '#009fb5', '#006876', '#FF7F7F', '#FF2C2C'
+                ],
+                hoverOffset: 10
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            tooltip: {
+                callbacks: {
+                    // O footer adiciona o texto abaixo do valor principal
+                    footer: function(tooltipItems) {
+                        // Pega o índice da fatia que o mouse está em cima
+                        let dataIndex = tooltipItems[0].dataIndex;
+                        // Retorna o texto baseado no índice
+                        return detalhesSensores[dataIndex];
+                    }
+                }
+            }
+        }
+    }
+});
+
+const ctx2 = document.getElementById('lineChart');
+
+new Chart(ctx2, {
+    type: 'line', // Alterado para linha
+    data: {
+        labels: ["08:00", "09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"],
+        datasets: [
+            {
+                label: "Total de Alertas",
+                // Quantidade de alertas acumulados em todos os sensores por hora
+                data: [0, 0, 2, 2, 4, 4, 3, 3, 2, 2, 1],
+                borderColor: "#006876",
+                backgroundColor: "#00687633",
+                borderWidth: 3,
+                tension: 0.2,
+                fill: true,
+                pointRadius: 5,
+                pointHoverRadius: 8
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: true,
+                position: 'top'
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    // Para os números ficarem inteiros e nao decimais tipo 3,5
+                    stepSize: 1,
+                    precision: 0
+                },
+                title: {
+                    display: true,
+                    text: 'Qtd. de Alertas'
+                }
+            },
+            x: {
+                title: {
+                    display: true,
+                    text: 'Horário da Leitura'
+                }
+            }
+        }
+    }
+});
+    
+</script>
+
+
+</body>
+</html>
