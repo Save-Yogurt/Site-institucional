@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<link rel="icon" href="img\ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+<link rel="icon" href="img\saveyogurt-logo.png">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,7 +25,7 @@
     <header>
         <div id="div_logo">
             <a href="index.html">
-            <img src="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+            <img src="img/saveyogurt-logo.png">
             <p id="logo_titulo">Save Yogurt</p>
             </a>
         </div>
@@ -43,8 +43,15 @@
         <div id="div_botoes">
             <a href="login.html">
             <Button class="botoes">Login</Button>
+<<<<<<< HEAD
             <a href="cadastro_login.html">
             <Button class="botoes">Cadastro</Button> 
+=======
+            </a>
+            <a href="cadastro.html">
+            <Button class="botoes">Cadastro</Button>
+            </a>
+>>>>>>> 9430c4dc2e65cf52d9ee63936ae2553a4cc3e7c7
         </div>
     </header>
 
@@ -63,13 +70,13 @@
             </div>
         </div>
         <div class="inicio_img">
-        <img src="https://www.lcbolonha.com.br/wp-content/uploads/2025/06/iogurte2.jpg">
+        <img src="./img/imagem-inicio.png">
         </div>
     </section>
     <!-- Fim Inicio -->
 
     <!-- Custo Invisível -->
-     <section class="custo">
+     <section class="custo" id="custo">
             <div class="custo_texto">
             <h1 class="titulo">O custo invisível do calor</h1>
             <p class="subtitulo">"Onde o monitoramento falha, o lucro derrete"</p>
@@ -81,7 +88,7 @@
                 <div class="vinte">
                     <h1>20%</h1>
                     <p>PERDA MÉDIA</p>
-                    <p>na cadeia de frio global sem<br>tecnologia de ponta.</p>
+                    <p>na cadeia fria global sem<br>tecnologia de ponta.</p>
                 </div>
                 <div class="risco">
                     <i class="fa-sharp fa-solid fa-arrow-trend-down"></i>
@@ -93,7 +100,7 @@
     <!-- Fim Custo Invisível -->
 
     <!-- Monitoramento -->
-    <h1 class="titulo_monitoramento">Monitoramento Térmico <span>IoT</span></h1>
+    <h1 class="titulo_monitoramento" id="monitoramento">Monitoramento Térmico <span>IoT</span></h1>
      <section class="monitoramento">
             <div class="card_grande">
                 <div class="card_monitoramento">
@@ -112,8 +119,7 @@
                         <i class="fa-solid fa-bell"></i>
                         <p>Alertas Automáticos</p>
                     </div>
-                    <p>Notificações instantâneas via SMS e App no momento de
-                    qualquer desvio térmico.</p>
+                    <p>Alertas intantâneos na sua dashboard para a ação mais rápida possível.</p>
                 </div>
                 <div class="metricas">
                     <div class="linha_titulo">
@@ -128,7 +134,7 @@
     <!-- Fim Monitoramento -->
 
     <!-- Protetor -->
-     <section class="protetor">
+     <section class="protetor" id="protetor">
             <div class="imagem">
                 <div class="imagem_card">
                     <img src="https://www.uai.com.br/uainoticias/wp-content/uploads/2026/01/iogurte-_1768411313572.jpg">
@@ -140,8 +146,8 @@
             </div>
             <div class="textos">
                 <h1>O <span>Protetor</span> do seu Laticínio</h1>
-                <p>Nascemos na interseção entre a tecnologia IoT e a indústria alimentícia. Nosso compromisso é reduzir o desperdício,
-                garantindo que o seu produto chegue à mesa do consumidor exatamente como saiu da fábrica: perfeito.</p>
+                <p>Nascemos na interseção entre a tecnologia IoT e a indústria alimentícia. Nosso compromisso é fornecer dados que ajudem a reduzir o desperdício,
+                garantindo que o seu produto chegue à mesa do consumidor exatamente como saiu da fábrica!</p>
                 <div class="mini_lista">
                     <i class="fa-solid fa-circle-check"></i><p>Zero desperdício logístico</p>
                     <i class="fa-solid fa-circle-check"></i><p>Total transparência de dados</p>
@@ -167,7 +173,7 @@
                 <div class="card_contato">
                     <i class="fa-solid fa-envelope"></i>
                     <h3>Email</h3>
-                    <p>contato@saveyogurt.com.br</p>
+                    <p>saveyogurt.contato@gmail.com</p>
                 </div>
 
                 <div class="card_contato">
@@ -183,14 +189,15 @@
                 </div>
             </div>
 
-            <div class="form">
+            <form class="form" action="https://formsubmit.co/saveyogurt.contato@gmail.com" method="POST">
                 <h3>Enviar <span>Mensagem</span></h3>
 
-                <input type="text" placeholder="Seu nome">
-                <input type="email" placeholder="Seu email">
-                <textarea placeholder="Sua mensagem"></textarea>
-                <button>Enviar</button>
-            </div>
+                <input type="text" name="nome" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu email" required>
+                <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
 
         </div>
     </section>
@@ -201,7 +208,7 @@
 
     <footer>
         <div class="footer_brand">
-        <img src="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+        <img src="img/saveyogurt-logo.png">
         <h2>Save Yogurt</h2>
         <p>© 2026 Save Yogurt<br>Todos os direitos reservados.</p>
     </div>
@@ -209,10 +216,10 @@
     <div class="footer_col">
         <span>LINKS RÁPIDOS</span>
         <a href="#">Início</a>
-        <a href="#">Custo Invisível</a>
-        <a href="#">Monitoramento</a>
-        <a href="#">Nossos Valores</a>
-        <a href="#">Fale Conosco</a>
+        <a href="#custo">Custo Invisível</a>
+        <a href="#monitoramento">Monitoramento</a>
+        <a href="#protetor">Nossos Valores</a>
+        <a href="#faleConosco">Fale Conosco</a>
     </div>
 
     <div class="footer_col">

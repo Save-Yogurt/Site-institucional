@@ -28,7 +28,7 @@ header {
 
     background: white;
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-bottom-color: rgba(0,0,0,0.15);
     border-top: none;
     border-left: none;
@@ -48,12 +48,13 @@ header {
 
 #div_logo img{
     width: 60px;
+    margin-bottom: 5px;
 }
 
 #logo_titulo{
     font-size: 24px;
     font-weight: 800;
-    color: #00BCD4;
+    color: #0078d4;
 }
 
 #div_links{
@@ -432,6 +433,13 @@ footer {
     padding: 35px;
     background: #F6FAFE;
     padding: 3.5% 5%;
+
+    border-style: solid;
+    border-width: 2px;
+    border-bottom: none;
+    border-top-color: rgba(0,0,0,0.15);
+    border-left: none;
+    border-right: none;
 }
 
 .footer_brand {
@@ -448,7 +456,7 @@ footer {
 }
 
 .footer_brand h2 { 
-    color: #00BCD4; 
+    color: #0078d4; 
     margin-bottom: 10px; 
 }
 
