@@ -54,7 +54,7 @@ header {
 #logo_titulo{
     font-size: 24px;
     font-weight: 800;
-    color: #00BCD4;
+    color: #0078d4;
 }
 
 #div_links{
@@ -456,7 +456,7 @@ footer {
 }
 
 .footer_brand h2 { 
-    color: #00BCD4; 
+    color: #0078d4; 
     margin-bottom: 10px; 
 }
 
