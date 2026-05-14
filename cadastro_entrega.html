@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro de Entrega</title>
+
+    <link rel="icon" href="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+
+    <link rel="stylesheet" href="css/cadastro-entrega.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar">
+
+        <div>
+
+            <div id="top_sidebar">
+
+                <img id="logo_sidebar" src="img/logo.png" alt="Logo">
+
+                <h2>Save Yogurt Admin</h2>
+
+            </div>
+
+            <hr>
+
+            <!-- MENU -->
+            <nav id="menu_sidebar">
+
+                <a href="dashboard.html" class="menu_item">
+                    <img src="img/dashboard.png" alt="">
+                    <span>Dashboard Geral</span>
+                </a>
+
+                <a href="dash-carga.html" class="menu_item">
+                    <img src="img/carga.png" alt="">
+                    <span>Dash Carga</span>
+                </a>
+
+                <a href="sensores.html" class="menu_item">
+                    <img src="img/sensor.png" alt="">
+                    <span>Sensores</span>
+                </a>
+
+                <a href="cadastro-do-lote.html" class="menu_item">
+                    <img src="img/prancheta.png" alt="">
+                    <span>Cadastro de Lote</span>
+                </a>
+
+                <a href="cadastro-entrega.html" class="menu_item ativo">
+                    <img src="img/entrega.png" alt="">
+                    <span>Cadastro de Entrega</span>
+                </a>
+
+            </nav>
+
+        </div>
+
+        <!-- BOTÃO -->
+        <div id="sidebar_footer">
+
+            <a href="index.html">
+
+                <button id="btn_sair">
+                    Sair do Sistema
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- CONTEÚDO -->
+    <div id="conteudo">
+
+     
+
+        <!-- MAIN -->
+        <main>
+
+            <!-- TÍTULO -->
+            <div id="bloco_titulo">
+
+                <div id="titulo">
+
+                    <img id="imagem_caminhao" src="img/caminhao.png" alt="">
+
+                    <h1>Cadastro de Nova Entrega</h1>
+
+                </div>
+
+                <p class="subtitulo">
+                    Preencha as informações da entrega
+                </p>
+
+            </div>
+
+            <!-- CONTAINER -->
+            <div id="container_entrega">
+
+                <!-- FORM -->
+                <div id="bloco_formulario">
+
+                    <h3 class="titulo_secao">
+                        Informações da Entrega
+                    </h3>
+
+                    <div class="grupo_input">
+
+                        <label>Placa do Veículo</label>
+
+                        <input type="text" placeholder="Ex: ABC-1234">
+
+                    </div>
+
+                    <div class="grupo_input">
+
+                        <label>Destino</label>
+
+                        <input type="text" placeholder="Ex: São Paulo - SP">
+
+                    </div>
+
+                    <div class="grupo_input">
+
+                        <label>Tipo de Veículo</label>
+
+                        <select>
+
+                            <option value="">
+                                Selecione...
+                            </option>
+
+                            <option>
+                                Caminhão Refrigerado
+                            </option>
+
+                            <option>
+                                Van Refrigerada
+                            </option>
+
+                            <option>
+                                Carreta
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- BOTÕES -->
+                    <div id="grupo_botoes">
+
+                        <button class="botao">
+                            Cadastrar Nova Entrega
+                        </button>
+
+                        <button class="botao_cancelar">
+                            Cancelar
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- TABELA -->
+                <div id="bloco_tabela">
+
+                    <h3 class="titulo_secao">
+                        Cargas Sem Entrega Vinculada
+                    </h3>
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>ID</th>
+                                <th>Lote</th>
+                                <th>Sensor</th>
+                                <th>Temp. Min</th>
+                                <th>Temp. Max</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>301</td>
+                                <td>A123</td>
+                                <td>S1</td>
+                                <td>2°C</td>
+                                <td>8°C</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>302</td>
+                                <td>B456</td>
+                                <td>S2</td>
+                                <td>1°C</td>
+                                <td>7°C</td>
+
+                            </tr>
+
+                            <tr>
+
+                                <td>303</td>
+                                <td>C789</td>
+                                <td>S3</td>
+                                <td>3°C</td>
+                                <td>9°C</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- FOOTER -->
+
+
+
+    </div>
+
+</body>
+
+</html>
