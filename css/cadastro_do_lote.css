@@ -1,137 +1,136 @@
  * {
-            box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, Roboto, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            margin: 0;
-            background: #eee;
-            color: #201c19;
-            height: 100vh;
-            display: flex;
-        }
-        
-        .sidebar {
-            width: 250px;
-            background: linear-gradient(180deg, #201c19, #3a342f);
-            color: #eee;
-            padding: 25px 15px;
-            box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2);
-            z-index: 10;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .sidebar-content {
-            flex: 1;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+     box-sizing: border-box;
+     font-family: 'Segoe UI', system-ui, Roboto, Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+ }
 
-        .sidebar-content img {
-            width: 100px;
-        }
-        
-        .sidebar-content h2 {
-            font-size: 1.4rem;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #006876;
-            text-align: center;
-            color: #00BCD4;
-        }
+ body {
+     margin: 0;
+     background: #eee;
+     color: #201c19;
+     height: 100vh;
+     display: flex;
+ }
 
-        .sidebar-content a {
-            text-decoration: none;
-            color: white;
-        }
-        
-        .sidebar div.menu-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            padding: 12px 15px;
-            border-radius: 8px;
-            margin-bottom: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        
-        .sidebar div.menu-item:hover {
-            background: #006876;
-            transform: translateX(5px);
-        }
+ .sidebar {
+     width: 250px;
+     background: linear-gradient(180deg, #201c19, #3a342f);
+     color: #eee;
+     padding: 25px 15px;
+     box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2);
+     z-index: 10;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
 
-        .sidebar div.menu-item-selected {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            padding: 12px 15px;
-            border-radius: 8px;
-            margin-bottom: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            background: #006876;
-        }
-        
-        .sidebar div.menu-item-selected:hover {
-            transform: translateX(5px);
-        }
+ .sidebar-content {
+     flex: 1;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+ }
 
-        .menu-text {
-            flex: 1;
-            text-align: center; /* texto no meio */
-        }
-        
-        .logout-section {
-            margin-top: auto;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .logout-btn {
-            width: 100%;
-            padding: 12px;
-            background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            text-decoration: none;
-        }
+ .sidebar-content img {
+     width: 100px;
+ }
 
-        a {
-            text-decoration: none;
-        }
-        
-        .logout-btn:hover {
-            background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px #006876;
-        }
-        
-        .logout-btn:active {
-            transform: translateY(0);
-        }
+ .sidebar-content h2 {
+     font-size: 1.4rem;
+     margin-bottom: 30px;
+     padding-bottom: 15px;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+     text-align: center;
+     color: #0078d4;
+ }
+
+ .sidebar-content a {
+     text-decoration: none;
+     color: white;
+ }
+
+ .sidebar div.menu-item {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     padding: 12px 15px;
+     border-radius: 8px;
+     margin-bottom: 8px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     font-weight: 600;
+ }
+
+ .sidebar div.menu-item:hover {
+     background: #004981;
+     transform: translateX(5px);
+ }
+
+ .sidebar div.menu-item-selected {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     padding: 12px 15px;
+     border-radius: 8px;
+     margin-bottom: 8px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     font-weight: 600;
+     background: #004981;
+ }
+
+ .sidebar div.menu-item-selected:hover {
+     transform: translateX(5px);
+ }
+
+ .menu-text {
+     flex: 1;
+     text-align: center;
+ }
+
+ .logout-section {
+     margin-top: auto;
+     padding-top: 20px;
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
+ }
+
+ .logout-btn {
+     width: 100%;
+     padding: 12px;
+     background-image: linear-gradient(to right, #004981 0%, #0078d4 50%, #0078d4 90%);
+    background-size: 200% auto;
+    transition: 0.5s;
+     color: white;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     font-weight: 600;
+     font-size: 1rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 8px;
+     text-decoration: none;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+ .logout-btn:hover {
+     background-position: right center;
+ }
+
+ .logout-btn:active {
+     transform: translateY(0);
+ }
         
         .main {
             flex: 1;
-            padding: 30px;
+            padding: 20px 30px;
             overflow: auto;
             background-color: whitesmoke;
             position: relative;
@@ -175,17 +174,16 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            
             margin-bottom: 25px;
+            border-bottom: 2px solid #ddd;
             padding-bottom: 10px;
-            border-bottom: 2px solid rgba(32, 28, 25, 0.1);
-            margin-right: 50px;
         }
 
-        .titulo-sensor h3 {
-            color: #201c19;
-            font-weight: 700;
-            font-size: 20px;
+        #titulo_lote {
+            font-size: 29px;
+            font-weight: bold;
+            color: black;
+            margin: 0;
         }
 
         #input_sensor {
@@ -202,13 +200,13 @@
         }
 
         #input_sensor:hover {
-            border-color: #008fa1;
+            border-color: #0078d4;
         }
 
         #input_sensor:focus {
             outline: none;
-            box-shadow: 0 0 4px #00BCD4;
-            border-color: #00BCD4;
+            box-shadow: 0 0 4px #0078d4;
+            border-color: #0078d4;
         }
 
         .chart-container {
@@ -236,7 +234,7 @@
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
             min-width: 200px;
             flex: 1;
-            border-left: 5px solid #006876;
+            border-left: 5px solid #0078d4;
             transition: all 0.3s ease;
         }
         
@@ -435,7 +433,9 @@ hr {
     font-weight: bold;
     border-radius: 6px;
     border: none;
-    background-color: #00A7B5;
+    background-image: linear-gradient(to right, #004981 0%, #0078d4 50%, #0078d4 90%);
+    background-size: 200% auto;
+    transition: 0.5s;
     color: white;
     cursor: pointer;
     margin-top: 5px;
@@ -443,7 +443,7 @@ hr {
 }
 
 .button:hover {
-    background-color: #008f9c;
+    background-position: right center;
 }
 
 .cancelar {
@@ -453,9 +453,15 @@ hr {
     font-weight: bold;
     border-radius: 6px;
     border: none;
-    background-color: #d9dfe0;
-    color: rgb(117, 116, 116);
+    background-color: #ddd;
+    transition: 0.5s;
+    color: #555;
     cursor: pointer;
     margin-top: 5px;
+    flex: 1;
+}
+
+.cancelar:hover {
+    background: #ccc;
 }
 

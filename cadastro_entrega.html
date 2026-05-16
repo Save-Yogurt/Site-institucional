@@ -8,80 +8,71 @@
 
     <title>Cadastro de Entrega</title>
 
-    <link rel="icon" href="img/ChatGPT_Image_Mar_23__2026__07_48_58_PM-removebg-preview.png">
+    <link rel="icon" href="img\saveyogurt-logo.png">
 
     <link rel="stylesheet" href="css/cadastro-entrega.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
 <body>
 
     <!-- SIDEBAR -->
-    <div id="sidebar">
-
-        <div>
-
-            <div id="top_sidebar">
-
-                <img id="logo_sidebar" src="img/logo.png" alt="Logo">
-
+    <div class="sidebar">
+            <div class="sidebar-content">
+                <img src="img/saveyogurt-logo.png">
                 <h2>Save Yogurt Admin</h2>
+                <a href="dash-geral.html">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-chart-line" style="color: #00BCD4"></i>
+                        <span class="menu-text">Dashboard Geral</span>
+                    </div>
+                </a>
 
+                <a href="dash-carga.html">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-boxes-stacked" style="color: #00BCD4;"></i>
+                        <span class="menu-text">Dashboard Cargas</span>
+                    </div>
+                </a>
+
+                <a href="cadastro-do-lote.html">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-layer-group" style="color: #00BCD4;"></i>
+                        <span class="menu-text">Cadastro Lote</span>
+                    </div>
+                </a>
+
+                <a href="cadastro-carga.html">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-pallet" style="color: #00BCD4;"></i>
+                        <span class="menu-text">Cadastro Carga</span>
+                    </div>
+                </a>
+
+                <a href="cadastro_entrega.html">
+                    <div class="menu-item-selected">
+                        <i class="fa-solid fa-truck-fast" style="color: #00BCD4;"></i>
+                        <span class="menu-text">Entregas</span>
+                    </div>
+                </a>
+
+                <a href="status-carga.html">
+                    <div class="menu-item">
+                        <i class="fa-solid fa-location-dot" style="color: #00BCD4;"></i>
+                        <span class="menu-text">Atualizar Entrega</span>
+                    </div>
+                </a>
             </div>
-
-            <hr>
-
-            <!-- MENU -->
-            <nav id="menu_sidebar">
-
-                <a href="dashboard.html" class="menu_item">
-                    <img src="img/dashboard.png" alt="">
-                    <span>Dashboard Geral</span>
-                </a>
-
-                <a href="dash-carga.html" class="menu_item">
-                    <img src="img/carga.png" alt="">
-                    <span>Dash Carga</span>
-                </a>
-
-                <a href="sensores.html" class="menu_item">
-                    <img src="img/sensor.png" alt="">
-                    <span>Sensores</span>
-                </a>
-
-                <a href="cadastro-do-lote.html" class="menu_item">
-                    <img src="img/prancheta.png" alt="">
-                    <span>Cadastro de Lote</span>
-                </a>
-
-                <a href="cadastro-entrega.html" class="menu_item ativo">
-                    <img src="img/entrega.png" alt="">
-                    <span>Cadastro de Entrega</span>
-                </a>
-
-            </nav>
-
-        </div>
-
-        <!-- BOTÃO -->
-        <div id="sidebar_footer">
-
-            <a href="index.html">
-
-                <button id="btn_sair">
+            <div class="logout-section">
+                <button type="button" class="logout-btn" onclick="window.location.href='index.html'">
                     Sair do Sistema
                 </button>
-
-            </a>
-
+            </div>
         </div>
-
-    </div>
-
-    <!-- CONTEÚDO -->
-    <div id="conteudo">
-
-     
 
         <!-- MAIN -->
         <main>
@@ -89,17 +80,7 @@
             <!-- TÍTULO -->
             <div id="bloco_titulo">
 
-                <div id="titulo">
-
-                    <img id="imagem_caminhao" src="img/caminhao.png" alt="">
-
-                    <h1>Cadastro de Nova Entrega</h1>
-
-                </div>
-
-                <p class="subtitulo">
-                    Preencha as informações da entrega
-                </p>
+                <h1>Cadastro de Nova Entrega</h1>
 
             </div>
 
@@ -236,10 +217,6 @@
         </main>
 
         <!-- FOOTER -->
-
-
-
-    </div>
 
 </body>
 

@@ -1,129 +1,138 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Segoe UI', system-ui, Roboto, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+ * {
+     box-sizing: border-box;
+     font-family: 'Segoe UI', system-ui, Roboto, Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+ }
 
-body {
-    margin: 0;
-    background: whitesmoke;
-    color: #201c19;
-    min-height: 100vh;
-}
+ body {
+     margin: 0;
+     background: #eee;
+     color: #201c19;
+     height: 100vh;
+     display: flex;
+ }
 
+ .sidebar {
+     width: 250px;
+     background: linear-gradient(180deg, #201c19, #3a342f);
+     color: #eee;
+     padding: 25px 15px;
+     box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2);
+     z-index: 10;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+ }
 
-header {
-    width: 250px;
-    height: 100vh;
-    background: linear-gradient(180deg, #201c19, #3a342f);
-    color: #eee;
-    padding: 25px 15px;
-    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+ .sidebar-content {
+     flex: 1;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+ }
 
-    position: fixed;
-    left: 0;
-    top: 0;
+ .sidebar-content img {
+     width: 100px;
+ }
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+ .sidebar-content h2 {
+     font-size: 1.4rem;
+     margin-bottom: 30px;
+     padding-bottom: 15px;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+     text-align: center;
+     color: #0078d4;
+ }
 
-#div_logo {
-    text-align: center;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #006876;
+ .sidebar-content a {
+     text-decoration: none;
+     color: white;
+ }
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
+ .sidebar div.menu-item {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     padding: 12px 15px;
+     border-radius: 8px;
+     margin-bottom: 8px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     font-weight: 600;
+ }
 
-#logo_img {
-    width: 95px;
-    height: auto;
-    object-fit: contain;
-}
+ .sidebar div.menu-item:hover {
+     background: #004981;
+     transform: translateX(5px);
+ }
 
-#logo {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #00BCD4;
-}
+ .sidebar div.menu-item-selected {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     padding: 12px 15px;
+     border-radius: 8px;
+     margin-bottom: 8px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     font-weight: 600;
+     background: #004981;
+ }
 
+ .sidebar div.menu-item-selected:hover {
+     transform: translateX(5px);
+ }
 
-#div_links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 30px;
-}
+ .menu-text {
+     flex: 1;
+     text-align: center;
+ }
 
-#div_links a {
-    text-decoration: none;
-    color: white;
-}
+ .logout-section {
+     margin-top: auto;
+     padding-top: 20px;
+     border-top: 1px solid rgba(255, 255, 255, 0.1);
+ }
 
-#div_links p {
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    text-align: center;
-}
+ .logout-btn {
+     width: 100%;
+     padding: 12px;
+     background-image: linear-gradient(to right, #004981 0%, #0078d4 50%, #0078d4 90%);
+    background-size: 200% auto;
+    transition: 0.5s;
+     color: white;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     font-weight: 600;
+     font-size: 1rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 8px;
+     text-decoration: none;
+ }
 
-#div_links p:hover {
-    background: #006876;
-    transform: translateX(5px);
-}
+ a {
+     text-decoration: none;
+ }
 
-#div_links a:last-child p {
-    background: #006876;
-}
+ .logout-btn:hover {
+     background-position: right center;
+ }
 
-
-#div_botoes {
-    margin-top: auto;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-#div_botoes a {
-    text-decoration: none;
-}
-
-.botoes {
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.botoes:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px #006876;
-}
-
-
+ .logout-btn:active {
+     transform: translateY(0);
+ }
 main {
-    margin-left: 250px;
-    min-height: 100vh;
-    padding: 30px;
+    flex: 1;
+    padding: 20px 30px;
     overflow: auto;
     background-color: whitesmoke;
+    position: relative;
 }
 
 #bloco_titulo {
@@ -149,7 +158,7 @@ main {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-    border-left: 5px solid #006876;
+    border-left: 5px solid #004981;
     transition: all 0.3s ease;
 }
 
@@ -188,7 +197,7 @@ select {
     padding: 10px 12px;
     font-family: inherit;
     border: 1px solid #d1d5db;
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: #f8f9fa;
     outline: none;
     font-size: 14px;
@@ -267,18 +276,20 @@ select:focus {
     cursor: pointer;
     margin-top: 10px;
     transition: all 0.3s ease;
+    color: #555;
 }
 
 .botao_salvar {
     width: 320px;
-    background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
+    background-image: linear-gradient(to right, #004981 0%, #0078d4 50%, #0078d4 90%);
+    background-size: 200% auto;
+    transition: 0.5s ease;
     color: white;
     margin-right: 15px;
 }
 
 .botao_salvar:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px #006876;
+    background-position: right center;
 }
 
 .botao_cancelar {
@@ -289,7 +300,6 @@ select:focus {
 
 .botao_cancelar:hover {
     background-color: #c9c9c9;
-    transform: translateY(-2px);
 }
 
 

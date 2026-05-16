@@ -13,6 +13,10 @@ body {
     background-color: #f5f5f5;
 }
 
+button:hover {
+    background-position: right center;
+}
+
 /* Começo Header */
 header {
     position: fixed;
@@ -71,7 +75,7 @@ header {
 }
 
 #div_links a:hover {
-    color: #00BCD4;
+    color: #0078d4;
 }
 
 #div_botoes{
@@ -89,7 +93,9 @@ header {
     width: 130px;
     height: 36px;
     border-radius: 50px;
-    background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
+    background-image: linear-gradient(to right, #004981 0%, #0078d4 50%, #0078d4 90%);
+    background-size: 200% auto;
+    transition: 0.5s;
     color: white;
     cursor: pointer;
 }
@@ -144,7 +150,7 @@ header {
 }
 
 .inicio_texto h1 span {
-    color: #00BCD4;
+    color: #0078d4;
 }
 
 .inicio_texto p {
@@ -170,7 +176,9 @@ header {
     width: 100%;
     height: 50px;
     border-radius: 50px;
-    background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
+    background-image: linear-gradient(to right, #004981 0%, #0078d4 50%, #0078d4 90%);
+    background-size: 200% auto;
+    transition: 0.5s;
     color: white;
     cursor: pointer;
 }
@@ -178,15 +186,20 @@ header {
 .botao_inicio2{
     border-style: solid;
     border-width: 3px;
-    border-color: #006876;
+    border-color: #0078d4;
     font-size: 14px;
     font-weight: bold;
     width: 130%;
     height: 50px;
     border-radius: 50px;
     background: transparent;
-    color: #006876;
+    color: #0078d4;
     cursor: pointer;
+    transition: 0.5s;
+}
+.botao_inicio2:hover{
+    color: white;
+    background-color: #0078d4;
 }
 
 .inicio_img {
@@ -377,7 +390,7 @@ header {
 
 .risco i {
     font-size: 50px;
-    color: #006876;
+    color: #0078d4;
 }
 
 @media (max-width: 1180px) {
@@ -471,7 +484,7 @@ header {
 }
 
 .titulo_monitoramento span {
-    color: #00BCD4;
+    color: #0078d4;
 }
 
 .card_grande {
@@ -501,12 +514,12 @@ header {
 .card_monitoramento .linha_titulo p {
     font-size: 25px;
     font-weight: 700;
-    color: #171C1F;
+    color: #00233d;
 }
 
 .card_monitoramento .linha_titulo i {
     font-size: 30px;
-    color: #006876;
+    color: #0078d4;
 }
 
 .card_monitoramento p {
@@ -546,12 +559,12 @@ header {
 .alertas .linha_titulo p {
     font-size: 18px;
     font-weight: 700;
-    color: #171C1F;
+    color: #00233d;
 }
 
 .alertas .linha_titulo i {
     font-size: 30px;
-    color: #006876;
+    color: #0078d4;
 }
 
 .alertas:hover {
@@ -559,7 +572,9 @@ header {
 }
 
 .metricas {
-    background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
+    background-image: linear-gradient(to right, #004981 0%, #0078d4 50%, #0078d4 90%);
+    background-size: 200% auto;
+    transition: 0.5s;
     padding: 25px;
     border-radius: 25px;
     width: 100%;
@@ -689,7 +704,7 @@ header {
 .imagem_card .card p:first-child {
     font-size: 15px;
     font-weight: 700;
-    color: #006876;
+    color: #0078d4;
 }
 
 .imagem_card .card p:last-child {
@@ -713,7 +728,7 @@ header {
 }
 
 .textos h1 span {
-    color: #00BCD4;
+    color: #0078d4;
 }
 
 .textos p {
@@ -730,7 +745,7 @@ header {
 
 .mini_lista i {
     font-size: 25px;
-    color: #00BCD4;
+    color: #0078d4;
 }
 
 .mini_lista p {
@@ -863,7 +878,7 @@ header {
 }
 
 .faleConosco h2 span {
-    color: #00BCD4;
+    color: #0078d4;
 }
 
 .conteudo {
@@ -897,7 +912,7 @@ header {
 }
 
 .card_contato h3 {
-    color: #006876;
+    color: #0078d4;
 }
 
 .card_contato p {
@@ -910,7 +925,7 @@ header {
 
 .card_contato i {
     font-size: 1.7rem;
-    color: #006876;
+    color: #0078d4;
     margin-bottom: 8px;
 }
 
@@ -929,7 +944,7 @@ header {
 }
 
 .form h3 span {
-    color: #00BCD4;
+    color: #0078d4;
 }
 
 .form input,
@@ -946,7 +961,7 @@ header {
 .form textarea:hover {
     outline: none !important;
     box-shadow: none !important;
-    border-color: #00bcd4;
+    border-color: #0078d4;
 }
 
 .form textarea {
@@ -962,7 +977,9 @@ header {
     width: 60%;
     height: 40px;
     border-radius: 50px;
-    background: linear-gradient(to right, #006876 0%, #00BCD4 100%);
+    background-image: linear-gradient(to right, #004981 0%, #0078d4 50%, #0078d4 90%);
+    background-size: 200% auto;
+    transition: 0.5s;
     color: white;
     cursor: pointer;
 }
@@ -992,9 +1009,8 @@ header {
 footer {
     display: flex;
     justify-content: space-between;
-    padding: 35px;
     background: #F6FAFE;
-    padding: 3.5% 5%;
+    padding: 3.5% 10%;
 
     border-style: solid;
     border-width: 2px;
@@ -1035,7 +1051,7 @@ footer {
 }
 
 .footer_col span { 
-    color: #00BCD4; 
+    color: #0078d4; 
     font-size: 13px; 
     font-weight: bold; 
 }
@@ -1044,22 +1060,20 @@ footer {
     color: #666; 
     text-decoration: none; 
     font-size: 13px; 
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .footer_col a:hover { 
-    color: #00BCD4;
+    color: #0078d4;
 }
 
-.footer_icons { 
-    display: flex; 
-    gap: 15px; 
+
+.footer_col i { 
+    font-size: 18px;
 }
 
-.footer_icons img { 
-    width: 15px; 
-    min-width: 15px;
-    opacity: 1; 
-}
 
 @media (max-width: 900px) {
     .footer_brand {
